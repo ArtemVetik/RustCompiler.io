@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Исходный файл D:/CLionProgects/RustCompiler/Lexer/TokenType.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00119_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TokenType.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00119.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_TOKENTYPE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_TOKENTYPE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">    8</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab718adec73e04ce3ec720dd11a06a308">ID</a>,         </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f">INTNUM</a>,     </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05">RNUM</a>,       </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060">STRINGLIT</a>,  </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683">BOOLLIT</a>,    </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Ключевые слова</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14392abe09bdee42982adff6e1b3313c">PRINTLN</a>,    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af96eee4e48ee90430f17fb3a8388507b">PRINT</a>,      </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6a72a6a776662a244f82d31e9274a07b">FUNCTION</a>,   </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c">INTEGER</a>,    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554">REAL</a>,       </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80">UINT</a>,       </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5">BOOL</a>,       </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ada02466f9a4224e477bd63afbcf573c5">LET</a>,        </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a35b1ee9c2b9c65dbdb8d85866a6c309b">MUT</a>,        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a7885ad399f9cab93cb42befbe402c588">FOR</a>,        </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ade6ee2b5d856295add4d5e3631fbfb93">IF</a>,         </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a9159b3578e4e1eb31ffdf90acd6f6e40">LOOP</a>,       </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac0ca84371abbc18f52fd48e32195cd15">WHILE</a>,      </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a778537b0acce06229cb78d5f72c907ab">ELSE</a>,       </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14d6a3e0201f58bfe7c01e775973e80e">BREAK</a>,      </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2bec276a54439fe011eb523b845dac5">RETURN</a>,     </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Разделители</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a883acd43c77567e1c3baced84ccf6ed7">PLUS</a>,       </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921affc0d9b54a1fe677c4c9e6b050e67c81">MINUS</a>,      </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a36b0ca295026d76ee15df50dc4991e90">MULT</a>,       </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac5a28f4b35a2884fa3277150ac5d0967">MOD</a>,        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a29bbf66f7f8529ec47e394fb5a36c646">DIV</a>,        </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa569e4235df07293fb2a7b7d4e95c31e">ASSIG</a>,      </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a636a15127109948106ce0c4b8f53e4b8">EXCL</a>,       </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a479a809c0b6eaaefd3b1df16f976df06">LAND</a>,       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa8a5bbeedca093b94b7f0d3f185b98f7">BAND</a>,       </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad3335c358811cfc353257e21b1d38229">LOR</a>,        </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aca2dc0c55b6e8d70bafcb4d84f5a9544">ARROW</a>,      </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Операции отношения</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af23c5f6001b935da226312ad26369232">MORE</a>,       </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a1798e8c3621ca53d9e3a80d257306000">LESS</a>,       </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0a384c82220cafa813cdd9426c2cceca">MOREEQUAL</a>,  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0ebd26208a4f97a2cab0b8ebda1c897e">LESSEQUAL</a>,  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a664982cde6e4019c8b35edb3db43975f">NASSIG</a>,     </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a969f331a87d8c958473c32b4d0e61a44">EQUAL</a>,      </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a673900b352c543d2558bfb859d9102cd">LFIGBR</a>,     </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af1eef81005d9e5c45508e102f207e313">RFIGBR</a>,     </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a4dae40c905dad53db72feb94bf873d7c">LSQRBR</a>,     </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a58314d8561d4263a02f5151f1db8cf33">RSQRBR</a>,     </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af65f22e75defc168edfc6444e6aaf4f8">COLON</a>,      </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921abaaceccc27b1d4e0968c999583f97de5">SEMICOLON</a>,  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5771037636a135112ecbe2df7c0fa54a">LRBR</a>,       </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a453960d124656ac962d2df7c31a705da">RRBR</a>,       </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad47c174ed277bdf06cfc72763ab7970c">COM</a>,        </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a40679521b5da0954b705341a2859f782">DOT</a>,        </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2e843feab94ef623fea888f07c28696">IGNORE</a>,     </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00270.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00270.html">TokenTypePrinter</a> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="a00270.html#aa8d6a3dc62bdf233c77ede3e96b2bd09">   70</a></span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="a00270.html#aa8d6a3dc62bdf233c77ede3e96b2bd09">PrintTokenType</a>(<span class="keyword">const</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> &amp;type) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab718adec73e04ce3ec720dd11a06a308">TokenType::ID</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;ID&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f">TokenType::INTNUM</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;INTNUM&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05">TokenType::RNUM</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;RNUM&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80">TokenType::UINT</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;UINT&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060">TokenType::STRINGLIT</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;STRINGLIT&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c">TokenType::INTEGER</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;INTEGER&quot;</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554">TokenType::REAL</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;REAL&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14d6a3e0201f58bfe7c01e775973e80e">TokenType::BREAK</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;BREAK&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ada02466f9a4224e477bd63afbcf573c5">TokenType::LET</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LET&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a35b1ee9c2b9c65dbdb8d85866a6c309b">TokenType::MUT</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MUT&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a7885ad399f9cab93cb42befbe402c588">TokenType::FOR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;FOR&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ade6ee2b5d856295add4d5e3631fbfb93">TokenType::IF</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;IF&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a778537b0acce06229cb78d5f72c907ab">TokenType::ELSE</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;ELSE&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a883acd43c77567e1c3baced84ccf6ed7">TokenType::PLUS</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;PLUS&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921affc0d9b54a1fe677c4c9e6b050e67c81">TokenType::MINUS</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MINUS&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a9159b3578e4e1eb31ffdf90acd6f6e40">TokenType::LOOP</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LOOP&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac0ca84371abbc18f52fd48e32195cd15">TokenType::WHILE</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;WHILE&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6a72a6a776662a244f82d31e9274a07b">TokenType::FUNCTION</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;FUNCTION&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a36b0ca295026d76ee15df50dc4991e90">TokenType::MULT</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MULT&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac5a28f4b35a2884fa3277150ac5d0967">TokenType::MOD</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MOD&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a29bbf66f7f8529ec47e394fb5a36c646">TokenType::DIV</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;DIV&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa569e4235df07293fb2a7b7d4e95c31e">TokenType::ASSIG</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;ASSIG&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af23c5f6001b935da226312ad26369232">TokenType::MORE</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MORE&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a1798e8c3621ca53d9e3a80d257306000">TokenType::LESS</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LESS&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0a384c82220cafa813cdd9426c2cceca">TokenType::MOREEQUAL</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;MOREEQUAL&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0ebd26208a4f97a2cab0b8ebda1c897e">TokenType::LESSEQUAL</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LESSEQUAL&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a664982cde6e4019c8b35edb3db43975f">TokenType::NASSIG</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;NASSIG&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a969f331a87d8c958473c32b4d0e61a44">TokenType::EQUAL</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;EQUAL&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a673900b352c543d2558bfb859d9102cd">TokenType::LFIGBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LFIGBR&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af1eef81005d9e5c45508e102f207e313">TokenType::RFIGBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;RFIGBR&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a4dae40c905dad53db72feb94bf873d7c">TokenType::LSQRBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LSQRBR&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a58314d8561d4263a02f5151f1db8cf33">TokenType::RSQRBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;RSQRBR&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af65f22e75defc168edfc6444e6aaf4f8">TokenType::COLON</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;COLON&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921abaaceccc27b1d4e0968c999583f97de5">TokenType::SEMICOLON</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;SEMICOLON&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5771037636a135112ecbe2df7c0fa54a">TokenType::LRBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LRBR&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a453960d124656ac962d2df7c31a705da">TokenType::RRBR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;RRBR&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad47c174ed277bdf06cfc72763ab7970c">TokenType::COM</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;COM&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a40679521b5da0954b705341a2859f782">TokenType::DOT</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;DOT&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a636a15127109948106ce0c4b8f53e4b8">TokenType::EXCL</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;EXLC&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14392abe09bdee42982adff6e1b3313c">TokenType::PRINTLN</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;PRINTLN&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2bec276a54439fe011eb523b845dac5">TokenType::RETURN</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;RETURN&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2e843feab94ef623fea888f07c28696">TokenType::IGNORE</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;IGNORE&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a479a809c0b6eaaefd3b1df16f976df06">TokenType::LAND</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LAND&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad3335c358811cfc353257e21b1d38229">TokenType::LOR</a>:<span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;LOR&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921af96eee4e48ee90430f17fb3a8388507b">TokenType::PRINT</a>: <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;PRINT&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa8a5bbeedca093b94b7f0d3f185b98f7">TokenType::BAND</a>: <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;BAND&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aca2dc0c55b6e8d70bafcb4d84f5a9544">TokenType::ARROW</a>: <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;ARROW&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683">TokenType::BOOLLIT</a>: <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;BOOLLIT&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_TOKENTYPE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a4dae40c905dad53db72feb94bf873d7c"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a4dae40c905dad53db72feb94bf873d7c">TokenType::LSQRBR</a></div><div class="ttdeci">@ LSQRBR</div><div class="ttdoc">[</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ad47c174ed277bdf06cfc72763ab7970c"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad47c174ed277bdf06cfc72763ab7970c">TokenType::COM</a></div><div class="ttdeci">@ COM</div><div class="ttdoc">,</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a1798e8c3621ca53d9e3a80d257306000"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a1798e8c3621ca53d9e3a80d257306000">TokenType::LESS</a></div><div class="ttdeci">@ LESS</div><div class="ttdoc">&lt;</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a5771037636a135112ecbe2df7c0fa54a"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5771037636a135112ecbe2df7c0fa54a">TokenType::LRBR</a></div><div class="ttdeci">@ LRBR</div><div class="ttdoc">(</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c">TokenType::INTEGER</a></div><div class="ttdeci">@ INTEGER</div><div class="ttdoc">i32</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5">TokenType::BOOL</a></div><div class="ttdeci">@ BOOL</div><div class="ttdoc">bool</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a453960d124656ac962d2df7c31a705da"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a453960d124656ac962d2df7c31a705da">TokenType::RRBR</a></div><div class="ttdeci">@ RRBR</div><div class="ttdoc">)</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921abaaceccc27b1d4e0968c999583f97de5"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921abaaceccc27b1d4e0968c999583f97de5">TokenType::SEMICOLON</a></div><div class="ttdeci">@ SEMICOLON</div><div class="ttdoc">;</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a0ebd26208a4f97a2cab0b8ebda1c897e"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0ebd26208a4f97a2cab0b8ebda1c897e">TokenType::LESSEQUAL</a></div><div class="ttdeci">@ LESSEQUAL</div><div class="ttdoc">&lt;=</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a9159b3578e4e1eb31ffdf90acd6f6e40"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a9159b3578e4e1eb31ffdf90acd6f6e40">TokenType::LOOP</a></div><div class="ttdeci">@ LOOP</div><div class="ttdoc">loop</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a36b0ca295026d76ee15df50dc4991e90"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a36b0ca295026d76ee15df50dc4991e90">TokenType::MULT</a></div><div class="ttdeci">@ MULT</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a969f331a87d8c958473c32b4d0e61a44"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a969f331a87d8c958473c32b4d0e61a44">TokenType::EQUAL</a></div><div class="ttdeci">@ EQUAL</div><div class="ttdoc">==</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a14d6a3e0201f58bfe7c01e775973e80e"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14d6a3e0201f58bfe7c01e775973e80e">TokenType::BREAK</a></div><div class="ttdeci">@ BREAK</div><div class="ttdoc">break</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a883acd43c77567e1c3baced84ccf6ed7"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a883acd43c77567e1c3baced84ccf6ed7">TokenType::PLUS</a></div><div class="ttdeci">@ PLUS</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa8a5bbeedca093b94b7f0d3f185b98f7"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa8a5bbeedca093b94b7f0d3f185b98f7">TokenType::BAND</a></div><div class="ttdeci">@ BAND</div><div class="ttdoc">&amp;</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a636a15127109948106ce0c4b8f53e4b8"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a636a15127109948106ce0c4b8f53e4b8">TokenType::EXCL</a></div><div class="ttdeci">@ EXCL</div><div class="ttdoc">!</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa2e843feab94ef623fea888f07c28696"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2e843feab94ef623fea888f07c28696">TokenType::IGNORE</a></div><div class="ttdeci">@ IGNORE</div><div class="ttdoc">Пробелы, табуляции, перенос строки, комментарии</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a664982cde6e4019c8b35edb3db43975f"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a664982cde6e4019c8b35edb3db43975f">TokenType::NASSIG</a></div><div class="ttdeci">@ NASSIG</div><div class="ttdoc">!=</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921af65f22e75defc168edfc6444e6aaf4f8"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921af65f22e75defc168edfc6444e6aaf4f8">TokenType::COLON</a></div><div class="ttdeci">@ COLON</div><div class="ttdoc">:</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921affc0d9b54a1fe677c4c9e6b050e67c81"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921affc0d9b54a1fe677c4c9e6b050e67c81">TokenType::MINUS</a></div><div class="ttdeci">@ MINUS</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ade6ee2b5d856295add4d5e3631fbfb93"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ade6ee2b5d856295add4d5e3631fbfb93">TokenType::IF</a></div><div class="ttdeci">@ IF</div><div class="ttdoc">if</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a58314d8561d4263a02f5151f1db8cf33"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a58314d8561d4263a02f5151f1db8cf33">TokenType::RSQRBR</a></div><div class="ttdeci">@ RSQRBR</div><div class="ttdoc">]</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aca2dc0c55b6e8d70bafcb4d84f5a9544"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aca2dc0c55b6e8d70bafcb4d84f5a9544">TokenType::ARROW</a></div><div class="ttdeci">@ ARROW</div><div class="ttdoc">-&gt;</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ad3335c358811cfc353257e21b1d38229"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ad3335c358811cfc353257e21b1d38229">TokenType::LOR</a></div><div class="ttdeci">@ LOR</div><div class="ttdoc">||</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05">TokenType::RNUM</a></div><div class="ttdeci">@ RNUM</div><div class="ttdoc">Вещественное число</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921af96eee4e48ee90430f17fb3a8388507b"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921af96eee4e48ee90430f17fb3a8388507b">TokenType::PRINT</a></div><div class="ttdeci">@ PRINT</div><div class="ttdoc">Prints.</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a6a72a6a776662a244f82d31e9274a07b"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6a72a6a776662a244f82d31e9274a07b">TokenType::FUNCTION</a></div><div class="ttdeci">@ FUNCTION</div><div class="ttdoc">fn</div><div class="ttdef"><b>Definition:</b> consoleOutput.txt:57</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a7885ad399f9cab93cb42befbe402c588"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a7885ad399f9cab93cb42befbe402c588">TokenType::FOR</a></div><div class="ttdeci">@ FOR</div><div class="ttdoc">for</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a40679521b5da0954b705341a2859f782"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a40679521b5da0954b705341a2859f782">TokenType::DOT</a></div><div class="ttdeci">@ DOT</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ac0ca84371abbc18f52fd48e32195cd15"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac0ca84371abbc18f52fd48e32195cd15">TokenType::WHILE</a></div><div class="ttdeci">@ WHILE</div><div class="ttdoc">while</div></div>
+<div class="ttc" id="aa00270_html"><div class="ttname"><a href="a00270.html">TokenTypePrinter</a></div><div class="ttdef"><b>Definition:</b> TokenType.h:67</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a29bbf66f7f8529ec47e394fb5a36c646"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a29bbf66f7f8529ec47e394fb5a36c646">TokenType::DIV</a></div><div class="ttdeci">@ DIV</div><div class="ttdoc">/</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ac5a28f4b35a2884fa3277150ac5d0967"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ac5a28f4b35a2884fa3277150ac5d0967">TokenType::MOD</a></div><div class="ttdeci">@ MOD</div><div class="ttdoc">%</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683">TokenType::BOOLLIT</a></div><div class="ttdeci">@ BOOLLIT</div><div class="ttdoc">Логический тип</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a479a809c0b6eaaefd3b1df16f976df06"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a479a809c0b6eaaefd3b1df16f976df06">TokenType::LAND</a></div><div class="ttdeci">@ LAND</div><div class="ttdoc">&amp;&amp;</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a778537b0acce06229cb78d5f72c907ab"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a778537b0acce06229cb78d5f72c907ab">TokenType::ELSE</a></div><div class="ttdeci">@ ELSE</div><div class="ttdoc">else</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80">TokenType::UINT</a></div><div class="ttdeci">@ UINT</div><div class="ttdoc">usize</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ab718adec73e04ce3ec720dd11a06a308"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab718adec73e04ce3ec720dd11a06a308">TokenType::ID</a></div><div class="ttdeci">@ ID</div><div class="ttdoc">Идентификатор</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa2bec276a54439fe011eb523b845dac5"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa2bec276a54439fe011eb523b845dac5">TokenType::RETURN</a></div><div class="ttdeci">@ RETURN</div><div class="ttdoc">return</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdoc">тип покена</div><div class="ttdef"><b>Definition:</b> TokenType.h:8</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a673900b352c543d2558bfb859d9102cd"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a673900b352c543d2558bfb859d9102cd">TokenType::LFIGBR</a></div><div class="ttdeci">@ LFIGBR</div><div class="ttdoc">{</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921af1eef81005d9e5c45508e102f207e313"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921af1eef81005d9e5c45508e102f207e313">TokenType::RFIGBR</a></div><div class="ttdeci">@ RFIGBR</div><div class="ttdoc">}</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a35b1ee9c2b9c65dbdb8d85866a6c309b"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a35b1ee9c2b9c65dbdb8d85866a6c309b">TokenType::MUT</a></div><div class="ttdeci">@ MUT</div><div class="ttdoc">mut</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060">TokenType::STRINGLIT</a></div><div class="ttdeci">@ STRINGLIT</div><div class="ttdoc">Строка</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554">TokenType::REAL</a></div><div class="ttdeci">@ REAL</div><div class="ttdoc">f32</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f">TokenType::INTNUM</a></div><div class="ttdeci">@ INTNUM</div><div class="ttdoc">Целое число</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921af23c5f6001b935da226312ad26369232"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921af23c5f6001b935da226312ad26369232">TokenType::MORE</a></div><div class="ttdeci">@ MORE</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a14392abe09bdee42982adff6e1b3313c"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a14392abe09bdee42982adff6e1b3313c">TokenType::PRINTLN</a></div><div class="ttdeci">@ PRINTLN</div><div class="ttdoc">Println.</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa569e4235df07293fb2a7b7d4e95c31e"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa569e4235df07293fb2a7b7d4e95c31e">TokenType::ASSIG</a></div><div class="ttdeci">@ ASSIG</div><div class="ttdoc">=</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ada02466f9a4224e477bd63afbcf573c5"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ada02466f9a4224e477bd63afbcf573c5">TokenType::LET</a></div><div class="ttdeci">@ LET</div><div class="ttdoc">let</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a0a384c82220cafa813cdd9426c2cceca"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a0a384c82220cafa813cdd9426c2cceca">TokenType::MOREEQUAL</a></div><div class="ttdeci">@ MOREEQUAL</div><div class="ttdoc">&gt;=</div></div>
+<div class="ttc" id="aa00270_html_aa8d6a3dc62bdf233c77ede3e96b2bd09"><div class="ttname"><a href="a00270.html#aa8d6a3dc62bdf233c77ede3e96b2bd09">TokenTypePrinter::PrintTokenType</a></div><div class="ttdeci">static std::string PrintTokenType(const TokenType &amp;type)</div><div class="ttdef"><b>Definition:</b> TokenType.h:70</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00119.html">TokenType.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

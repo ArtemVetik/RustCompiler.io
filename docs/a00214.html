@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Класс LexError</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00214.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="a00211.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс LexError</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ошибка на этапе лексического анализа  
+ <a href="a00214.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00053_source.html">LexError.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:LexError:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00213.png" border="0" usemap="#_lex_error_inherit__map" alt="Inheritance graph"/></div>
+<map name="_lex_error_inherit__map" id="_lex_error_inherit__map">
+<area shape="rect" title="ошибка на этапе лексического анализа" alt="" coords="22,155,93,181"/>
+<area shape="rect" href="a00206.html" title="базовый класс ошибок компилятора" alt="" coords="17,80,97,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,109,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса LexError:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00212.png" border="0" usemap="#_lex_error_coll__map" alt="Collaboration graph"/></div>
+<map name="_lex_error_coll__map" id="_lex_error_coll__map">
+<area shape="rect" title="ошибка на этапе лексического анализа" alt="" coords="65,275,135,301"/>
+<area shape="rect" href="a00206.html" title="базовый класс ошибок компилятора" alt="" coords="60,199,140,225"/>
+<area shape="rect" title=" " alt="" coords="5,109,109,136"/>
+<area shape="rect" href="a00230.html" title="позиция токена" alt="" coords="133,109,240,136"/>
+<area shape="rect" href="a00226.html" title="позиция символа в файле" alt="" coords="123,5,251,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aea6d33b6170022e672713ac1e0f1ecf0"><td class="memItemLeft" align="right" valign="top"><a id="aea6d33b6170022e672713ac1e0f1ecf0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LexError</b> (const std::string &amp;error, const <a class="el" href="a00230.html">TokenLocation</a> &amp;location)</td></tr>
+<tr class="separator:aea6d33b6170022e672713ac1e0f1ecf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8effcf1ba0f7ba0be18077a0d463b6"><td class="memItemLeft" align="right" valign="top"><a id="adb8effcf1ba0f7ba0be18077a0d463b6"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const noexcept override</td></tr>
+<tr class="separator:adb8effcf1ba0f7ba0be18077a0d463b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00206"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00206')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="a00206.html">BaseError</a></td></tr>
+<tr class="memitem:ace84691003b1e8b305ba94b4e5ad4248 inherit pub_methods_a00206"><td class="memItemLeft" align="right" valign="top"><a id="ace84691003b1e8b305ba94b4e5ad4248"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BaseError</b> (const std::string &amp;error, <a class="el" href="a00266.html">Token</a> *const &amp;token)</td></tr>
+<tr class="separator:ace84691003b1e8b305ba94b4e5ad4248 inherit pub_methods_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb04e0e547c22dc4bc5beb7cc4cc59d inherit pub_methods_a00206"><td class="memItemLeft" align="right" valign="top"><a id="aacb04e0e547c22dc4bc5beb7cc4cc59d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BaseError</b> (const std::string &amp;error, const <a class="el" href="a00230.html">TokenLocation</a> &amp;location)</td></tr>
+<tr class="separator:aacb04e0e547c22dc4bc5beb7cc4cc59d inherit pub_methods_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e4e53381f7f8775e43f5dc3f3655e6 inherit pub_methods_a00206"><td class="memItemLeft" align="right" valign="top"><a id="ac6e4e53381f7f8775e43f5dc3f3655e6"></a>
+const <a class="el" href="a00230.html">TokenLocation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ac6e4e53381f7f8775e43f5dc3f3655e6">GetTokenLocation</a> () const</td></tr>
+<tr class="memdesc:ac6e4e53381f7f8775e43f5dc3f3655e6 inherit pub_methods_a00206"><td class="mdescLeft">&#160;</td><td class="mdescRight">возвращает позицию токена <br /></td></tr>
+<tr class="separator:ac6e4e53381f7f8775e43f5dc3f3655e6 inherit pub_methods_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3235f097930a1cab5c722e1b2cbccb73 inherit pub_methods_a00206"><td class="memItemLeft" align="right" valign="top"><a id="a3235f097930a1cab5c722e1b2cbccb73"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const noexcept override</td></tr>
+<tr class="separator:a3235f097930a1cab5c722e1b2cbccb73 inherit pub_methods_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_a00206"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00206')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="a00206.html">BaseError</a></td></tr>
+<tr class="memitem:a628664dbb8d94b514388badaf2352b84 inherit pro_attribs_a00206"><td class="memItemLeft" align="right" valign="top"><a id="a628664dbb8d94b514388badaf2352b84"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_error</b></td></tr>
+<tr class="separator:a628664dbb8d94b514388badaf2352b84 inherit pro_attribs_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f83ff75a2153e314b2bb584928b353 inherit pro_attribs_a00206"><td class="memItemLeft" align="right" valign="top"><a id="a32f83ff75a2153e314b2bb584928b353"></a>
+<a class="el" href="a00230.html">TokenLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_location</b></td></tr>
+<tr class="separator:a32f83ff75a2153e314b2bb584928b353 inherit pro_attribs_a00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>ошибка на этапе лексического анализа </p>
+</div><hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>D:/CLionProgects/RustCompiler/Exceptions/<a class="el" href="a00053_source.html">LexError.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00214.html">LexError</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

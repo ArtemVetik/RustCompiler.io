@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: RustCompiler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">RustCompiler </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Оглавление</h3>
+<ul><li class="level1"><a href="#autotoc_md1">О компиляторе</a><ul><li class="level2"><a href="#autotoc_md2">Лексический анализ</a></li>
+<li class="level2"><a href="#autotoc_md3">Синтаксический анализ</a></li>
+<li class="level2"><a href="#autotoc_md15">Семантический анализ</a></li>
+<li class="level2"><a href="#autotoc_md17">Генерация кода</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md18">Авторы</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md_html_mainpage_mainpage"></a> <img src="Icons/RustToMasm.png" alt="alt text" title="Rust to MASM" class="inline"/></p>
+<p><b>Содержание</b></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+О компиляторе</h1>
+<p>Курсовая работа по предмету Системное программное обеспечение. Простой транслятор с языка программирования Rust на &lt;abbr title="Macro Assembler"&gt;MASM&lt;/abbr&gt;.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Лексический анализ</h2>
+<ol type="1">
+<li>Поддержка целочисленных, вещественных, строковых, логических типов</li>
+<li>Поддержка однострочных и многострочных комментариев</li>
+<li>Сохраняется позиция начала и конца каждого токена</li>
+<li>Поддержка следующих ключевых слов <blockquote class="doxtable">
+<p></p>
+<p></p>
+</blockquote>
+<code>fn, for, if, loop, while, else, let, mut, f32, i32, usize, println, print, break, return, true, false, bool</code></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Синтаксический анализ</h2>
+<p><a class="anchor" id="autotoc_md4"></a></p><h5>Объявление переменной</h5>
+<div class="fragment"><div class="line">let var1; // без инициализации и без типа</div>
+<div class="line">let var2: i32; // без инициализации и с типом</div>
+<div class="line">let var3 = 3.0; // с инициализацией и без типа (тип определится сам)</div>
+<div class="line">let var4:f32 = 5.0; // с инициализацией и с типом</div>
+<div class="line">let (a, b, c) = (1.0, true, 123); // групповая инициализация</div>
+</div><!-- fragment --><p>При групповой инициализации тип переменной не указывается и определяется автоматически. <a class="anchor" id="autotoc_md5"></a></p><h5>Объявление массива</h5>
+<div class="fragment"><div class="line">let arr1[i32; 4]; // без инициализации</div>
+<div class="line">let arr2:[bool, 4] = [true, !false, false, !true]; // с инициализацией</div>
+</div><!-- fragment --><p>Также переменная и массив могут быть помечены как <em>mutable</em> с помощью ключевого слова <code>mut</code>, например: </p><div class="fragment"><div class="line">let mut var = 3+5;</div>
+</div><!-- fragment --><p>Это означает что переменная может быть изменена больше одного раза.</p>
+<p><a class="anchor" id="autotoc_md6"></a></p><h5>Обращение к элементу массива</h5>
+<p>Поддерживается возможность доступа к произвольному элементу массива </p><div class="fragment"><div class="line">let mut arr:[i32; 4] = [1,2,3,4];</div>
+<div class="line">arr[3] = -4;</div>
+<div class="line">arr[0] = arr[3];</div>
+</div><!-- fragment --><p><a class="anchor" id="autotoc_md7"></a></p><h5>Условные конструкции</h5>
+<div class="fragment"><div class="line">if (a &gt; 10 || a &lt; -10) {</div>
+<div class="line">    // something</div>
+<div class="line">}</div>
+<div class="line">else if (b == 0 &amp;&amp; a != 10) {</div>
+<div class="line">    // something</div>
+<div class="line">}</div>
+<div class="line">else ...</div>
+</div><!-- fragment --><p>Количество <code>else</code> неограничено</p>
+<p><a class="anchor" id="autotoc_md8"></a></p><h5>Циклы</h5>
+<div class="fragment"><div class="line">while (i &lt; 100) {</div>
+<div class="line">    // something</div>
+<div class="line">}</div>
+<div class="line">loop { // бесконечный цикл, выход через break или return</div>
+<div class="line">    // something</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="anchor" id="autotoc_md9"></a></p><h5>Вывод</h5>
+<p>Для вывода массива целиком используется формат вывода <code>{:?}</code>. Для переменной: <code>{}</code> </p><div class="fragment"><div class="line">println!(&quot;array: {:?}\nvariable:{}&quot;, arr, var);</div>
+</div><!-- fragment --><p><a class="anchor" id="autotoc_md10"></a></p><h5>Объявление функции</h5>
+<p>Поддерживается объявление функции, которая может принимать как переменную, так и массив. Возвращаемым значением функции может быть переменная любого типа. </p><div class="fragment"><div class="line">fn quick_sort(mut array: [i32; 10], first: usize, last: usize) {</div>
+<div class="line">    // something</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="anchor" id="autotoc_md11"></a></p><h5>Функция sqrt()</h5>
+<p>Для чисел типа <code>f32</code> поддерживается вызов функции sqrt через точку. Выражение вернет корень вещественного числа. </p><div class="fragment"><div class="line">let two = 2.0;</div>
+<div class="line">let sqrVar = two.sqrt();</div>
+</div><!-- fragment --><p><a class="anchor" id="autotoc_md12"></a></p><h5>Особенности</h5>
+<ul>
+<li>Программа на входном языке должна содержать хотя бы одну функцию.</li>
+<li>Внутри каждого блока с фигурными скобками может быть неограниченное количество вложенных блоков. Также может быть <b>неограниченное число вложенных конструкций</b> <code>if ... else</code>, <code>while</code>, <code>loop</code></li>
+<li>Инициализировать переменную можно <b>любым выражением</b>, имеющий какой-либо <b>значимый тип</b>. Таким образом после знака равно может быть любое арифметическое или логическое выражение, состоящие из переменных, вызовов функций, обращений к элементам массива. Проверка на соотвествие типов происходит в семантическом анализе.</li>
+<li>Индексом для обращения к элементу массива также может быть любое выражение (см. пункт выше)</li>
+</ul>
+<p><a class="anchor" id="autotoc_md13"></a></p><h5>Синтаксические ошибки</h5>
+<p>При возникновении синтаксической ошибки компилятор прекращает дальнейший разбор и оповещает пользователя о соответствующей синтаксической ошибке. При этом компилятор выводит место, в котором произошла синтаксическая ошибка и предполагает что должно было быть на этом месте.</p>
+<p><img src="Icons/parserError.png" alt="alt text" title="Parser error" class="inline"/></p>
+<p><a class="anchor" id="autotoc_md14"></a></p><h5>AST дерево</h5>
+<p>На этапе синтаксического анализа происходит построение абстрактного синтаксического дерева для дальнейшего использования в семантическом анализе и генерации кода.</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Семантический анализ</h2>
+<p>Осуществляет проверку на семантическую корректность исходного текста программы. <em>Реализованные проверки:</em></p><ul>
+<li>Соответствие типов данных в арифметических и логических выражениях.</li>
+<li>Соответствие типов данных при инициализации и присваивании переменной и массива</li>
+<li>Соответствие размера массива и числа присваиваемых элементов</li>
+<li>Соответствие числа элементов в групповой инициализации</li>
+<li>Проверка на существование переменной и массива при их использовании</li>
+<li>Проверка на инициализацию переменной при ее использовании (недопускается использование неинициализированных переменных и массивов)</li>
+<li>Проверка на повторное присваивание переменной или массива, не помеченного как <code>mut</code></li>
+<li>Проверка объявление переменной или массива с уже существующим именем</li>
+<li>Поддержка <b>локальных переменных и массивов</b></li>
+<li>Проверка обращения по индексу массива. Недопускаются отрицательные константы в индексе</li>
+<li>Проверка условий в конструкциях <code>if</code> и <code>while</code>. Допускаются условия только типа <code>bool</code></li>
+<li>Проверка соответствия числа форматов вывода и передаваемых аргументов в функции <code>println!()</code>. Таже недопускается исользование формата вывода массива для переменной и наоборот.</li>
+<li>Проверка на существование вызываемой функции</li>
+<li>Проверка на соответствие числа и типов передаваемых в функцию агументов</li>
+<li>Проверка на наличие в функции ключевого слова <code>return</code> и соответствие возвращаемого значения</li>
+</ul>
+<p><a class="anchor" id="autotoc_md16"></a></p><h5>Семантические ошибки</h5>
+<p>В случае семантической ошибки компилятор прекращает дальнейший разбор и выводит описание ошибки и ее место в тексте.</p>
+<p><img src="Icons/semanticError.png" alt="alt text" title="Semantic error" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Генерация кода</h2>
+<p>Выходным языком был выбран &lt;abbr title="Macro Assembler"&gt;MASM&lt;/abbr&gt;</p><ul>
+<li>Все переменные и массивы в ассемблере объявляются как локальные для каждой функции. Для того, чтобы избежать повторения имен, в случае если переменные являются локальными на языке Rust, повторяющиеся имена помечаются дополнительным нижним подчеркиванием <code>_</code></li>
+<li>В корне с компилятором находится папка, содержащая бинарный файл со всеми ключевыми словами языка ассемблер. Если название переменной на языке Rust совпадает с ключевым словом на ассемблере, то она дополнительно помечается нижним подчеркиванием</li>
+<li>В ассемблере были использованы два типа данных: <code>DWORD</code> и <code>REAL8</code></li>
+<li>Параметры в функции передаются только через стек</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md18"></a>
+Авторы</h1>
+<p>Студетны 2-го курса <em>БГТУ "Военмех"</em> группы <em>И584</em> &copy; 2020 Ветик Артём &amp; Труфанов Глеб </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

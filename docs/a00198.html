@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Структура MasmID_Data</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00198.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="a00195.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура MasmID_Data</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>описывает переменную в макро ассемблере  
+ <a href="a00198.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00044_source.html">MasmTypeData.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1141b01f834902434aeb83cb452108a1"><td class="memItemLeft" align="right" valign="top"><a id="a1141b01f834902434aeb83cb452108a1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MasmID_Data</b> (const std::string &amp;<a class="el" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>=&quot;&quot;, const std::string &amp;<a class="el" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">uid</a>=&quot;&quot;, const std::pair&lt; <a class="el" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a>, std::string &gt; &amp;<a class="el" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">type</a>=std::make_pair(<a class="el" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">MASMType::None</a>, &quot;None&quot;))</td></tr>
+<tr class="separator:a1141b01f834902434aeb83cb452108a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab449184097b55b87fc5bac0aae1b3197"><td class="memItemLeft" align="right" valign="top"><a id="ab449184097b55b87fc5bac0aae1b3197"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const std::string &amp;<a class="el" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>) const</td></tr>
+<tr class="separator:ab449184097b55b87fc5bac0aae1b3197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d36efcdb8558003f99c0d30593669a5"><td class="memItemLeft" align="right" valign="top"><a id="a3d36efcdb8558003f99c0d30593669a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="a00198.html">MasmID_Data</a> &amp;data) const</td></tr>
+<tr class="separator:a3d36efcdb8558003f99c0d30593669a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad7ca51621ac388aa8d9b68d686175042"><td class="memItemLeft" align="right" valign="top"><a id="ad7ca51621ac388aa8d9b68d686175042"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a></td></tr>
+<tr class="memdesc:ad7ca51621ac388aa8d9b68d686175042"><td class="mdescLeft">&#160;</td><td class="mdescRight">идентификатор <br /></td></tr>
+<tr class="separator:ad7ca51621ac388aa8d9b68d686175042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c914e67b9846b142b0d2a4aaa12d4ed"><td class="memItemLeft" align="right" valign="top"><a id="a7c914e67b9846b142b0d2a4aaa12d4ed"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">uid</a></td></tr>
+<tr class="memdesc:a7c914e67b9846b142b0d2a4aaa12d4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">уникальный идентификатор <br /></td></tr>
+<tr class="separator:a7c914e67b9846b142b0d2a4aaa12d4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66be73c64a8997e4ee38e514b95b67a7"><td class="memItemLeft" align="right" valign="top"><a id="a66be73c64a8997e4ee38e514b95b67a7"></a>
+std::pair&lt; <a class="el" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">type</a></td></tr>
+<tr class="memdesc:a66be73c64a8997e4ee38e514b95b67a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">тип переменной в паре со строковым предтавлением типа <br /></td></tr>
+<tr class="separator:a66be73c64a8997e4ee38e514b95b67a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af60923a5da015812caa8b21561aa74"><td class="memItemLeft" align="right" valign="top"><a id="a0af60923a5da015812caa8b21561aa74"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInitialize</b></td></tr>
+<tr class="separator:a0af60923a5da015812caa8b21561aa74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8932a0a2d1b323397384557822d1f5e3"><td class="memItemLeft" align="right" valign="top"><a id="a8932a0a2d1b323397384557822d1f5e3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="separator:a8932a0a2d1b323397384557822d1f5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>описывает переменную в макро ассемблере </p>
+</div><hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>D:/CLionProgects/RustCompiler/CodeGenerator/<a class="el" href="a00044_source.html">MasmTypeData.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00198.html">MasmID_Data</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

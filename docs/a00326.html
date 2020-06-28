@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Структура TypeData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00326.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="a00323.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура TypeData</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Данный о типе  
+ <a href="a00326.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00173_source.html">TypeData.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aae22548c65fa1adfb7c30f1d97ff4647"><td class="memItemLeft" align="right" valign="top"><a id="aae22548c65fa1adfb7c30f1d97ff4647"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TypeData</b> (const <a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="el" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>)</td></tr>
+<tr class="separator:aae22548c65fa1adfb7c30f1d97ff4647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e03f4969fc42da30bbee1442a3d6db"><td class="memItemLeft" align="right" valign="top"><a id="ab8e03f4969fc42da30bbee1442a3d6db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TypeData</b> (const bool &amp;<a class="el" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>, const bool &amp;<a class="el" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>, const <a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="el" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>)</td></tr>
+<tr class="separator:ab8e03f4969fc42da30bbee1442a3d6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d5eaaed9a0f20f6d779cf1c9c510c3"><td class="memItemLeft" align="right" valign="top"><a id="a84d5eaaed9a0f20f6d779cf1c9c510c3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="a00326.html">TypeData</a> &amp;right) const</td></tr>
+<tr class="separator:a84d5eaaed9a0f20f6d779cf1c9c510c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97bd533edfac1b7122c2d500638e9b4"><td class="memItemLeft" align="right" valign="top"><a id="ae97bd533edfac1b7122c2d500638e9b4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="a00326.html">TypeData</a> &amp;right) const</td></tr>
+<tr class="separator:ae97bd533edfac1b7122c2d500638e9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57474728b78fa73590c42b038e42d7c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a57474728b78fa73590c42b038e42d7c2">ToString</a> ()</td></tr>
+<tr class="separator:a57474728b78fa73590c42b038e42d7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:af9c34675196ea0a547565c662b63cf0c"><td class="memItemLeft" align="right" valign="top"><a id="af9c34675196ea0a547565c662b63cf0c"></a>
+static <a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#af9c34675196ea0a547565c662b63cf0c">ToType</a> (const <a class="el" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> &amp;tokenType)</td></tr>
+<tr class="memdesc:af9c34675196ea0a547565c662b63cf0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">перевод из TokenType в Type. <br /></td></tr>
+<tr class="separator:af9c34675196ea0a547565c662b63cf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef46af58d142097eec00729b8b2f919"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a2ef46af58d142097eec00729b8b2f919">ToString</a> (const <a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="el" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>)</td></tr>
+<tr class="separator:a2ef46af58d142097eec00729b8b2f919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a8a68621284edeb4561c42782dfde6775"><td class="memItemLeft" align="right" valign="top"><a id="a8a68621284edeb4561c42782dfde6775"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a></td></tr>
+<tr class="memdesc:a8a68621284edeb4561c42782dfde6775"><td class="mdescLeft">&#160;</td><td class="mdescRight">является ли ссылочным типом <br /></td></tr>
+<tr class="separator:a8a68621284edeb4561c42782dfde6775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750010f20a29d35d1be1f292961ad216"><td class="memItemLeft" align="right" valign="top"><a id="a750010f20a29d35d1be1f292961ad216"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a></td></tr>
+<tr class="memdesc:a750010f20a29d35d1be1f292961ad216"><td class="mdescLeft">&#160;</td><td class="mdescRight">является ли mutable типом <br /></td></tr>
+<tr class="separator:a750010f20a29d35d1be1f292961ad216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7018b423e45feb3a7e815ce3124069"><td class="memItemLeft" align="right" valign="top"><a id="a3c7018b423e45feb3a7e815ce3124069"></a>
+<a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a></td></tr>
+<tr class="memdesc:a3c7018b423e45feb3a7e815ce3124069"><td class="mdescLeft">&#160;</td><td class="mdescRight">тип <br /></td></tr>
+<tr class="separator:a3c7018b423e45feb3a7e815ce3124069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Данный о типе </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a57474728b78fa73590c42b038e42d7c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57474728b78fa73590c42b038e42d7c2">&#9670;&nbsp;</a></span>ToString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string TypeData::ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>строковое представление текущего типа </dd></dl>
+
+</div>
+</div>
+<a id="a2ef46af58d142097eec00729b8b2f919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef46af58d142097eec00729b8b2f919">&#9670;&nbsp;</a></span>ToString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string TypeData::ToString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>строковое представление типа </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>D:/CLionProgects/RustCompiler/Semantics/<a class="el" href="a00173_source.html">TypeData.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00326.html">TypeData</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

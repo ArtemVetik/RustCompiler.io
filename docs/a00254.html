@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Класс State</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00254.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="a00251.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс State<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>базовый класс для всех состояний  
+ <a href="a00254.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00098_source.html">State.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:State:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00253.png" border="0" usemap="#_state_inherit__map" alt="Inheritance graph"/></div>
+<map name="_state_inherit__map" id="_state_inherit__map">
+<area shape="rect" title="базовый класс для всех состояний" alt="" coords="221,5,274,32"/>
+<area shape="rect" href="a00234.html" title="состояние идентификатора" alt="" coords="5,80,71,107"/>
+<area shape="rect" href="a00238.html" title="состояние игнорируемых символов" alt="" coords="95,80,183,107"/>
+<area shape="rect" href="a00246.html" title="состояние числа" alt="" coords="207,80,287,107"/>
+<area shape="rect" href="a00250.html" title="состояние разделителей" alt="" coords="311,80,421,107"/>
+<area shape="rect" href="a00262.html" title="состояние строки" alt="" coords="445,80,532,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac7edb72fc5c3bf6e0d6905440e339b81"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">Contains</a> (char sym)=0</td></tr>
+<tr class="separator:ac7edb72fc5c3bf6e0d6905440e339b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e828599a331b3ab9abf470da8d2b15"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">CanTransitTo</a> (char sym)=0</td></tr>
+<tr class="memdesc:a09e828599a331b3ab9abf470da8d2b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверяет возмжность перехода в текущее состояние по входящему символу  <a href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09e828599a331b3ab9abf470da8d2b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fd3e480b668342bf9fc5cbe3994708"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">CanTransitTo</a> (<a class="el" href="a00254.html">State</a> *const &amp;to) const</td></tr>
+<tr class="memdesc:a73fd3e480b668342bf9fc5cbe3994708"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверяет возмжность перехода в текущее состояние из другого состояния  <a href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73fd3e480b668342bf9fc5cbe3994708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f74b4fd185ec2ee9a1c6b509fe92dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00266.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">GetToken</a> (const std::string &amp;value)=0</td></tr>
+<tr class="memdesc:aa9f74b4fd185ec2ee9a1c6b509fe92dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">возвращает токен из текущего состояния  <a href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa9f74b4fd185ec2ee9a1c6b509fe92dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>базовый класс для всех состояний </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a09e828599a331b3ab9abf470da8d2b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e828599a331b3ab9abf470da8d2b15">&#9670;&nbsp;</a></span>CanTransitTo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool State::CanTransitTo </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sym</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>проверяет возмжность перехода в текущее состояние по входящему символу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sym</td><td>входящий символ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если по входящему символу можно перейти в текущее состояние, false - в противном случае </dd></dl>
+
+<p>Замещается в <a class="el" href="a00250.html#ac4a56e4a26e593e9267b1641be12eef2">SeparatorState</a>, <a class="el" href="a00234.html#a7bf7152c8a440c7d7d6068e58f77a5b8">IDState</a>, <a class="el" href="a00238.html#a71358e1fb822bbc5439e2f8fd9343682">IgnoreState</a>, <a class="el" href="a00262.html#aa0a93f289f5253fa54a72aa4cc69bee4">StringState</a> и <a class="el" href="a00246.html#a33b7b8c6d4617fb6e765c2d5fd80035d">NumState</a>.</p>
+
+</div>
+</div>
+<a id="a73fd3e480b668342bf9fc5cbe3994708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73fd3e480b668342bf9fc5cbe3994708">&#9670;&nbsp;</a></span>CanTransitTo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool State::CanTransitTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00254.html">State</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>to</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>проверяет возмжность перехода в текущее состояние из другого состояния </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>входящее состояние </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если по входящему состоянию можно перейти в текущее состояние, false - в противном случае </dd></dl>
+
+<p>Переопределяется в <a class="el" href="a00234.html#a856dbda131950e5536b58327eaa850db">IDState</a>.</p>
+
+</div>
+</div>
+<a id="ac7edb72fc5c3bf6e0d6905440e339b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7edb72fc5c3bf6e0d6905440e339b81">&#9670;&nbsp;</a></span>Contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool State::Contains </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sym</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sym</td><td>входящий символ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если входящий символ содержится в текущем состоянии, false - в противном случае </dd></dl>
+
+<p>Замещается в <a class="el" href="a00250.html#a6067758dc4e35562cfd702f604c8a744">SeparatorState</a>, <a class="el" href="a00234.html#ab0d24221f4fd598a20186672a2d785d4">IDState</a>, <a class="el" href="a00238.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">IgnoreState</a>, <a class="el" href="a00262.html#acc002cdd22d6c5c62724b5200398f7a9">StringState</a> и <a class="el" href="a00246.html#a57548b0dada89db9ff8d950b59fca57d">NumState</a>.</p>
+
+</div>
+</div>
+<a id="aa9f74b4fd185ec2ee9a1c6b509fe92dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f74b4fd185ec2ee9a1c6b509fe92dd">&#9670;&nbsp;</a></span>GetToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00266.html">Token</a>* State::GetToken </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>возвращает токен из текущего состояния </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">полная</td><td>лексема </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="a00250.html#afc3fdde321980a786b1252f64fb94310">SeparatorState</a>, <a class="el" href="a00234.html#a3ef525aaa8f747b45e353dc878262424">IDState</a>, <a class="el" href="a00238.html#a2c20107c7b28912d2f725ba2cf1f5d74">IgnoreState</a>, <a class="el" href="a00262.html#a2bdd5143bb8f16f5d7a25b9df33f921c">StringState</a> и <a class="el" href="a00246.html#a693271414f418deca3b0529f72077f9b">NumState</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>D:/CLionProgects/RustCompiler/Lexer/<a class="el" href="a00098_source.html">State.h</a></li>
+<li>D:/CLionProgects/RustCompiler/Lexer/State.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00254.html">State</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

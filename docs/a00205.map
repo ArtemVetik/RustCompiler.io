@@ -1,0 +1,8 @@
+<map id="BaseError" name="BaseError">
+<area shape="rect" id="node1" title="базовый класс ошибок компилятора" alt="" coords="214,80,294,107"/>
+<area shape="rect" id="node3" href="$a00210.html" title="ошибка на этапе генерации кода" alt="" coords="5,155,143,181"/>
+<area shape="rect" id="node4" href="$a00214.html" title="ошибка на этапе лексического анализа" alt="" coords="167,155,237,181"/>
+<area shape="rect" id="node5" href="$a00218.html" title="ошибка на этапе синтаксического анализа" alt="" coords="262,155,350,181"/>
+<area shape="rect" id="node6" href="$a00222.html" title="ошибка на этапе семантического анализа" alt="" coords="375,155,480,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="202,5,306,32"/>
+</map>

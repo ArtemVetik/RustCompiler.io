@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Класс CodeGenerator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00182.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="a00179.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс CodeGenerator</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>класс генерации ассемблерного кода  
+ <a href="a00182.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00041_source.html">CodeGenerator.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab367c2e441a3dbbdd13d19188b192c7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00182.html#ab367c2e441a3dbbdd13d19188b192c7f">CodeGenerator</a> (const <a class="el" href="a00278.html">AST_Tree</a> &amp;tree, const <a class="el" href="a00306.html">Table</a>&lt; <a class="el" href="a00322.html">Function_Data</a> &gt; &amp;funcTable)</td></tr>
+<tr class="separator:ab367c2e441a3dbbdd13d19188b192c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6992f09ae9391e350141b4ff503246"><td class="memItemLeft" align="right" valign="top"><a id="a5e6992f09ae9391e350141b4ff503246"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00182.html#a5e6992f09ae9391e350141b4ff503246">Generate</a> ()</td></tr>
+<tr class="memdesc:a5e6992f09ae9391e350141b4ff503246"><td class="mdescLeft">&#160;</td><td class="mdescRight">запуск генерации кода <br /></td></tr>
+<tr class="separator:a5e6992f09ae9391e350141b4ff503246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabff1a74359717ed0619a37d86b3f34d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CreateAsmFile</a> ()</td></tr>
+<tr class="memdesc:aabff1a74359717ed0619a37d86b3f34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">создание ассемблерного файла  <a href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aabff1a74359717ed0619a37d86b3f34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>класс генерации ассемблерного кода </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab367c2e441a3dbbdd13d19188b192c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab367c2e441a3dbbdd13d19188b192c7f">&#9670;&nbsp;</a></span>CodeGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CodeGenerator::CodeGenerator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00278.html">AST_Tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00306.html">Table</a>&lt; <a class="el" href="a00322.html">Function_Data</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>funcTable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>абстрактное дерево синтаксического разбора, полученное на этапе синтаксического анализа </td></tr>
+    <tr><td class="paramname">funcTable</td><td>таблица функций, полученная на этапе семантического разбора </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aabff1a74359717ed0619a37d86b3f34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabff1a74359717ed0619a37d86b3f34d">&#9670;&nbsp;</a></span>CreateAsmFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CodeGenerator::CreateAsmFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>создание ассемблерного файла </p>
+<dl class="section note"><dt>Заметки</dt><dd>создает файл с именем temp.asm в подкаталоге TempCompile </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>D:/CLionProgects/RustCompiler/CodeGenerator/<a class="el" href="a00041_source.html">CodeGenerator.h</a></li>
+<li>D:/CLionProgects/RustCompiler/CodeGenerator/CodeGenerator.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00182.html">CodeGenerator</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

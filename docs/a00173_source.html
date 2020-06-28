@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Исходный файл D:/CLionProgects/RustCompiler/Semantics/TypeData.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00173_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TypeData.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00173.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_TYPEDATA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_TYPEDATA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Lexer/TokenType.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">    9</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a6adf97f83acf6453d4a6a4b1070f3754">None</a>, </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7ac26f15e86e3de4c398a8273272aba034">Bool</a>, </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a27118326006d3829667a400ad23d5d98">String</a>, </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a7f80fcc452c2f1ed2bb51b39d0864df1">Real</a>, </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Integer</a>, </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Unsigned</a> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00326.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00326.html">TypeData</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00326.html#a8a68621284edeb4561c42782dfde6775">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="a00326.html#a750010f20a29d35d1be1f292961ad216">   24</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">   25</a></span>&#160;    <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00326.html">TypeData</a>() : <a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>(false), <a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>(false), <a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>(<a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>::<a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">None</a>) { }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00326.html">TypeData</a>(<span class="keyword">const</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>) : <a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>(false), <a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>(false), <a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>(<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>) { }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00326.html">TypeData</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;<a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a> , <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;<a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>, <span class="keyword">const</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this-&gt;isReference = <a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this-&gt;isMutable = <a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        this-&gt;type = <a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="a00326.html">TypeData</a> &amp;right)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a> == right.<a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a> &amp;&amp;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a> == right.<a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a> &amp;&amp; (<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> == right.<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> ||</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                (<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> == <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Type::Integer</a> &amp;&amp; right.<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> == <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Type::Unsigned</a>) ||</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                (<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> == <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Type::Unsigned</a> &amp;&amp; right.<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a> == <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Type::Integer</a>));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code" href="a00326.html">TypeData</a> &amp;right)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == right);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a00326.html#af9c34675196ea0a547565c662b63cf0c">   48</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> <a class="code" href="a00326.html#af9c34675196ea0a547565c662b63cf0c">ToType</a>(<span class="keyword">const</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> &amp;tokenType) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">switch</span> (tokenType) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554">TokenType::REAL</a>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05">TokenType::RNUM</a>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a7f80fcc452c2f1ed2bb51b39d0864df1">Type::Real</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c">TokenType::INTEGER</a>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f">TokenType::INTNUM</a>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Type::Integer</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80">TokenType::UINT</a>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Type::Unsigned</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060">TokenType::STRINGLIT</a>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a27118326006d3829667a400ad23d5d98">Type::String</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683">TokenType::BOOLLIT</a>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5">TokenType::BOOL</a>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7ac26f15e86e3de4c398a8273272aba034">Type::Bool</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a6adf97f83acf6453d4a6a4b1070f3754">Type::None</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="a00326.html#a57474728b78fa73590c42b038e42d7c2">   69</a></span>&#160;    std::string <a class="code" href="a00326.html#a57474728b78fa73590c42b038e42d7c2">ToString</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::string res;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="a00326.html#a8a68621284edeb4561c42782dfde6775">isReference</a>) res += <span class="stringliteral">&quot;&amp; &quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="a00326.html#a750010f20a29d35d1be1f292961ad216">isMutable</a>) res += <span class="stringliteral">&quot;mut &quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        res += <a class="code" href="a00326.html#a57474728b78fa73590c42b038e42d7c2">TypeData::ToString</a>(<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a00326.html#a2ef46af58d142097eec00729b8b2f919">   78</a></span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="a00326.html#a2ef46af58d142097eec00729b8b2f919">ToString</a>(<span class="keyword">const</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> &amp;<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">type</a>){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a6adf97f83acf6453d4a6a4b1070f3754">Type::None</a>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;None&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7ac26f15e86e3de4c398a8273272aba034">Type::Bool</a>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bool&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a7f80fcc452c2f1ed2bb51b39d0864df1">Type::Real</a>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Real&quot;</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Type::Integer</a>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Integer&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Type::Unsigned</a>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unsigned&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a27118326006d3829667a400ad23d5d98">Type::String</a>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;String&quot;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_TYPEDATA_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a5d5cd46919fa987731fb2edefe0f2a0c">TokenType::INTEGER</a></div><div class="ttdeci">@ INTEGER</div><div class="ttdoc">i32</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5">TokenType::BOOL</a></div><div class="ttdeci">@ BOOL</div><div class="ttdoc">bool</div></div>
+<div class="ttc" id="aa00326_html_af9c34675196ea0a547565c662b63cf0c"><div class="ttname"><a href="a00326.html#af9c34675196ea0a547565c662b63cf0c">TypeData::ToType</a></div><div class="ttdeci">static Type ToType(const TokenType &amp;tokenType)</div><div class="ttdoc">перевод из TokenType в Type.</div><div class="ttdef"><b>Definition:</b> TypeData.h:48</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7a7f80fcc452c2f1ed2bb51b39d0864df1"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a7f80fcc452c2f1ed2bb51b39d0864df1">Type::Real</a></div><div class="ttdeci">@ Real</div><div class="ttdoc">вещественный тип</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7ac26f15e86e3de4c398a8273272aba034"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7ac26f15e86e3de4c398a8273272aba034">Type::Bool</a></div><div class="ttdeci">@ Bool</div><div class="ttdoc">логический тип</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a27118326006d3829667a400ad23d5d98">Type::String</a></div><div class="ttdeci">@ String</div><div class="ttdoc">строковый тип</div></div>
+<div class="ttc" id="aa00326_html_a2ef46af58d142097eec00729b8b2f919"><div class="ttname"><a href="a00326.html#a2ef46af58d142097eec00729b8b2f919">TypeData::ToString</a></div><div class="ttdeci">static std::string ToString(const Type &amp;type)</div><div class="ttdef"><b>Definition:</b> TypeData.h:78</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">MASMType::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">обозначает отсутствие типа</div></div>
+<div class="ttc" id="aa00326_html_a8a68621284edeb4561c42782dfde6775"><div class="ttname"><a href="a00326.html#a8a68621284edeb4561c42782dfde6775">TypeData::isReference</a></div><div class="ttdeci">bool isReference</div><div class="ttdoc">является ли ссылочным типом</div><div class="ttdef"><b>Definition:</b> TypeData.h:23</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">тип переменной на входном языке</div><div class="ttdef"><b>Definition:</b> TypeData.h:9</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa0faef0851b4294c06f2b94bb1cb2044">Type::Integer</a></div><div class="ttdeci">@ Integer</div><div class="ttdoc">целочисленный тип</div></div>
+<div class="ttc" id="aa00326_html"><div class="ttname"><a href="a00326.html">TypeData</a></div><div class="ttdoc">Данный о типе</div><div class="ttdef"><b>Definition:</b> TypeData.h:22</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921afa17033cffe1ff01b2b7857a9e291a05">TokenType::RNUM</a></div><div class="ttdeci">@ RNUM</div><div class="ttdoc">Вещественное число</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7aa1a914735b205424ba6c40b85528d78a">Type::Unsigned</a></div><div class="ttdeci">@ Unsigned</div><div class="ttdoc">беззнаковый тип</div></div>
+<div class="ttc" id="aa00326_html_a57474728b78fa73590c42b038e42d7c2"><div class="ttname"><a href="a00326.html#a57474728b78fa73590c42b038e42d7c2">TypeData::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdef"><b>Definition:</b> TypeData.h:69</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7a6adf97f83acf6453d4a6a4b1070f3754">Type::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">неизвестный тип</div></div>
+<div class="ttc" id="aa00326_html_a750010f20a29d35d1be1f292961ad216"><div class="ttname"><a href="a00326.html#a750010f20a29d35d1be1f292961ad216">TypeData::isMutable</a></div><div class="ttdeci">bool isMutable</div><div class="ttdoc">является ли mutable типом</div><div class="ttdef"><b>Definition:</b> TypeData.h:24</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ab7ce58ecdb213f46961feab845c55683">TokenType::BOOLLIT</a></div><div class="ttdeci">@ BOOLLIT</div><div class="ttdoc">Логический тип</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a3351504090a741e69da641a42e00da80">TokenType::UINT</a></div><div class="ttdeci">@ UINT</div><div class="ttdoc">usize</div></div>
+<div class="ttc" id="aa00326_html_a3c7018b423e45feb3a7e815ce3124069"><div class="ttname"><a href="a00326.html#a3c7018b423e45feb3a7e815ce3124069">TypeData::type</a></div><div class="ttdeci">Type type</div><div class="ttdoc">тип</div><div class="ttdef"><b>Definition:</b> TypeData.h:25</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdoc">тип покена</div><div class="ttdef"><b>Definition:</b> TokenType.h:8</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a6abc0d0a13778b101015e0f9335ef060">TokenType::STRINGLIT</a></div><div class="ttdeci">@ STRINGLIT</div><div class="ttdoc">Строка</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921a8cf125b0e31559ba75a9d9b4f818a554">TokenType::REAL</a></div><div class="ttdeci">@ REAL</div><div class="ttdoc">f32</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921ae2edf1b1213a78cd624fda9b9ae8e50f">TokenType::INTNUM</a></div><div class="ttdeci">@ INTNUM</div><div class="ttdoc">Целое число</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_275bb1d0e905a25e0bbd03c40a1809f0.html">Semantics</a></li><li class="navelem"><a class="el" href="a00173.html">TypeData.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rust Compiler: Исходный файл D:/CLionProgects/RustCompiler/CodeGenerator/MasmTypeData.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="MainIcon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Rust Compiler
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00044_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MasmTypeData.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00044.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_MASMTYPEDATA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_MASMTYPEDATA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">   10</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a89fceca1813d232246c1482deedd978c">DWORD</a>, </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2ae5e843381d23dd6a37e0d378b09bd8d4">REAL8</a>, </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">None</a>, </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00198.html">   17</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00198.html">MasmID_Data</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">   18</a></span>&#160;    std::string <a class="code" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">   19</a></span>&#160;    std::string <a class="code" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">uid</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">   20</a></span>&#160;    std::pair&lt;MASMType, std::string&gt; <a class="code" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">type</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> isInitialize;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> value;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00198.html">MasmID_Data</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span> = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> std::string &amp;<a class="code" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">uid</a> = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                         <span class="keyword">const</span> std::pair&lt;MASMType, std::string&gt;&amp; <a class="code" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">type</a> = std::make_pair(<a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">MASMType::None</a>, <span class="stringliteral">&quot;None&quot;</span>)) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this-&gt;<span class="keywordtype">id</span> = <a class="code" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this-&gt;uid = <a class="code" href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">uid</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this-&gt;type = <a class="code" href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">type</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        isInitialize = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        value = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == <a class="code" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="a00198.html">MasmID_Data</a> &amp;data)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == data.<a class="code" href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">id</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00202.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00202.html">MasmArray_Data</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="a00202.html#a95b6a524745d9ff7f6900c374c460471">   44</a></span>&#160;    std::string <a class="code" href="a00202.html#a95b6a524745d9ff7f6900c374c460471">id</a>; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00202.html#a3659daad312fb6f5334388b2c0a3d20e">   45</a></span>&#160;    std::string <a class="code" href="a00202.html#a3659daad312fb6f5334388b2c0a3d20e">uid</a>; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a00202.html#a48ab3ca84f8af00c366a1c31a9fe08c8">   46</a></span>&#160;    std::pair&lt;MASMType, std::string&gt; <a class="code" href="a00202.html#a48ab3ca84f8af00c366a1c31a9fe08c8">type</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> isPtr;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> isInitialize;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> elementCount;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::vector&lt;float&gt; values;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00202.html">MasmArray_Data</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span> = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> std::string &amp;<a class="code" href="a00202.html#a3659daad312fb6f5334388b2c0a3d20e">uid</a> = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            <span class="keyword">const</span> std::pair&lt;MASMType, std::string&gt;&amp; <a class="code" href="a00202.html#a48ab3ca84f8af00c366a1c31a9fe08c8">type</a> = std::make_pair(<a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">MASMType::None</a>, <span class="stringliteral">&quot;None&quot;</span>),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;count = 0, <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;isPtr = <span class="keyword">false</span>) : values(count) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        this-&gt;<span class="keywordtype">id</span> = <a class="code" href="a00202.html#a95b6a524745d9ff7f6900c374c460471">id</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        this-&gt;uid = <a class="code" href="a00202.html#a3659daad312fb6f5334388b2c0a3d20e">uid</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        this-&gt;type = <a class="code" href="a00202.html#a48ab3ca84f8af00c366a1c31a9fe08c8">type</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        this-&gt;isPtr = isPtr;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        isInitialize = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        elementCount = count;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == <a class="code" href="a00202.html#a95b6a524745d9ff7f6900c374c460471">id</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="a00202.html">MasmArray_Data</a> &amp;data)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == data.<a class="code" href="a00202.html#a95b6a524745d9ff7f6900c374c460471">id</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_MASMTYPEDATA_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aa00202_html_a95b6a524745d9ff7f6900c374c460471"><div class="ttname"><a href="a00202.html#a95b6a524745d9ff7f6900c374c460471">MasmArray_Data::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">идентификатор</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:44</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a></div><div class="ttdeci">MASMType</div><div class="ttdoc">тип в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:10</div></div>
+<div class="ttc" id="aa00202_html_a48ab3ca84f8af00c366a1c31a9fe08c8"><div class="ttname"><a href="a00202.html#a48ab3ca84f8af00c366a1c31a9fe08c8">MasmArray_Data::type</a></div><div class="ttdeci">std::pair&lt; MASMType, std::string &gt; type</div><div class="ttdoc">тип переменной в паре со строковым предтавлением типа</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:46</div></div>
+<div class="ttc" id="aa00202_html"><div class="ttname"><a href="a00202.html">MasmArray_Data</a></div><div class="ttdoc">описывает массив в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:43</div></div>
+<div class="ttc" id="aa00198_html_a7c914e67b9846b142b0d2a4aaa12d4ed"><div class="ttname"><a href="a00198.html#a7c914e67b9846b142b0d2a4aaa12d4ed">MasmID_Data::uid</a></div><div class="ttdeci">std::string uid</div><div class="ttdoc">уникальный идентификатор</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:19</div></div>
+<div class="ttc" id="aa00198_html_ad7ca51621ac388aa8d9b68d686175042"><div class="ttname"><a href="a00198.html#ad7ca51621ac388aa8d9b68d686175042">MasmID_Data::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">идентификатор</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:18</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a6adf97f83acf6453d4a6a4b1070f3754">MASMType::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">обозначает отсутствие типа</div></div>
+<div class="ttc" id="aa00202_html_a3659daad312fb6f5334388b2c0a3d20e"><div class="ttname"><a href="a00202.html#a3659daad312fb6f5334388b2c0a3d20e">MasmArray_Data::uid</a></div><div class="ttdeci">std::string uid</div><div class="ttdoc">уникальный идентификатор</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:45</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2ae5e843381d23dd6a37e0d378b09bd8d4"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2ae5e843381d23dd6a37e0d378b09bd8d4">MASMType::REAL8</a></div><div class="ttdeci">@ REAL8</div><div class="ttdoc">вещественный тип</div></div>
+<div class="ttc" id="aa00198_html_a66be73c64a8997e4ee38e514b95b67a7"><div class="ttname"><a href="a00198.html#a66be73c64a8997e4ee38e514b95b67a7">MasmID_Data::type</a></div><div class="ttdeci">std::pair&lt; MASMType, std::string &gt; type</div><div class="ttdoc">тип переменной в паре со строковым предтавлением типа</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:20</div></div>
+<div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MasmID_Data</a></div><div class="ttdoc">описывает переменную в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:17</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2a89fceca1813d232246c1482deedd978c"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2a89fceca1813d232246c1482deedd978c">MASMType::DWORD</a></div><div class="ttdeci">@ DWORD</div><div class="ttdoc">целочисленный тип</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_807f156248ce581aedf65e5c746537c0.html">CodeGenerator</a></li><li class="navelem"><a class="el" href="a00044.html">MasmTypeData.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>
