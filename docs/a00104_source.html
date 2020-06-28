@@ -88,48 +88,51 @@ $(document).ready(function(){initNavTree('a00104_source.html',''); initResizable
 <div class="title">StateMachine.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_STATEMACHINE_H</span></div>
+<a href="a00104.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_STATEMACHINE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_STATEMACHINE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;State.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Transition.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00098.html">State.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00125.html">Transition.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Exceptions/LexError.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00258.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00258.html">StateMachine</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="a00254.html">State</a>* _currentState;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="a00274.html">Transition</a> _transition;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string _buffer;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00226.html">TokenLinePosition</a> _startPos, _endPos;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::vector&lt;Token*&gt; _tokens;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> SplitSeparators(<span class="keyword">const</span> std::string&amp; buffer);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="a00258.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00258.html">StateMachine</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="a00254.html">State</a>* _currentState;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00274.html">Transition</a> _transition;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string _buffer;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="a00226.html">TokenLinePosition</a> _startPos, _endPos;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::vector&lt;Token*&gt; _tokens;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="a00258.html">StateMachine</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ~<a class="code" href="a00258.html">StateMachine</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58">TakeSymbol</a>(<span class="keywordtype">char</span> symbol);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00258.html#aaa17584c4ff941f01b1ed757d206e288">GenerateToken</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> PrintTokens() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    [[nodiscard]] <span class="keyword">const</span> std::vector&lt;Token*&gt;&amp; GetTokens() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_STATEMACHINE_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> SplitSeparators(<span class="keyword">const</span> std::string&amp; buffer);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="a00258.html">StateMachine</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="a00258.html">StateMachine</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58">TakeSymbol</a>(<span class="keywordtype">char</span> symbol);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00258.html#aaa17584c4ff941f01b1ed757d206e288">GenerateToken</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> PrintTokens() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    [[nodiscard]] <span class="keyword">const</span> std::vector&lt;Token*&gt;&amp; GetTokens() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_STATEMACHINE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00258_html"><div class="ttname"><a href="a00258.html">StateMachine</a></div><div class="ttdoc">Машина состояний лексического анализатора</div><div class="ttdef"><b>Definition:</b> StateMachine.h:12</div></div>
-<div class="ttc" id="aa00274_html"><div class="ttname"><a href="a00274.html">Transition</a></div><div class="ttdoc">класс, осузествляющий переходы между состояниями</div><div class="ttdef"><b>Definition:</b> Transition.h:15</div></div>
-<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
+<div class="ttc" id="aa00258_html"><div class="ttname"><a href="a00258.html">StateMachine</a></div><div class="ttdoc">Машина состояний лексического анализатора</div><div class="ttdef"><b>Definition:</b> StateMachine.h:14</div></div>
+<div class="ttc" id="aa00274_html"><div class="ttname"><a href="a00274.html">Transition</a></div><div class="ttdoc">класс, осузествляющий переходы между состояниями</div><div class="ttdef"><b>Definition:</b> Transition.h:17</div></div>
+<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
+<div class="ttc" id="aa00125_html"><div class="ttname"><a href="a00125.html">Transition.h</a></div></div>
 <div class="ttc" id="aa00258_html_aaa17584c4ff941f01b1ed757d206e288"><div class="ttname"><a href="a00258.html#aaa17584c4ff941f01b1ed757d206e288">StateMachine::GenerateToken</a></div><div class="ttdeci">void GenerateToken()</div><div class="ttdoc">формирует токен по буфферу</div><div class="ttdef"><b>Definition:</b> StateMachine.cpp:28</div></div>
 <div class="ttc" id="aa00226_html"><div class="ttname"><a href="a00226.html">TokenLinePosition</a></div><div class="ttdoc">позиция символа в файле</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:7</div></div>
 <div class="ttc" id="aa00258_html_a0cf70c038fe9dbf0a0a2eae541678c58"><div class="ttname"><a href="a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58">StateMachine::TakeSymbol</a></div><div class="ttdeci">void TakeSymbol(char symbol)</div><div class="ttdoc">получение символа</div><div class="ttdef"><b>Definition:</b> StateMachine.cpp:8</div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">State.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><b>StateMachine.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00104.html">StateMachine.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

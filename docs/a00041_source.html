@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 <div class="title">CodeGenerator.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_CODEGENERATOR_H</span></div>
+<a href="a00041.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_CODEGENERATOR_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_CODEGENERATOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
@@ -104,115 +104,116 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../Lexer/Token.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MasmTypeData.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00182.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00182.html">CodeGenerator</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        uint32_t uu;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">float</span> d;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    } Converter32{};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        uint64_t uu;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">double</span> d;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    } Converter64{};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">enum</span> RulesForLabels {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        While = 0, Loop, If, Else, Block</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">enum</span> CompareType {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Reverse, Direct</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">struct </span>MASMCompareOperation {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> operation;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::string directCompUnsigned;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::string reverseCompUnsigned;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string directCompSigned;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::string reverseCompSigned;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="a00278.html">AST_Tree</a> _tree;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::ifstream _tableOfReservedWords;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> _funcTable;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a>* _currentBlock;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::string _template;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string _asmCodeString;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::vector&lt;MASMCompareOperation&gt; _compareOperations;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string _functionEndLabel;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _labelNum;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::stack&lt;std::string&gt; _breakLabels;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::stack&lt;std::string&gt; _ifEndLabels;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::stack&lt;RulesForLabels&gt; _rules;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::vector&lt;int&gt; _rulesCount;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::string Traversal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::string CheckRule(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> std::string &amp;exitLabel = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> InitCompareOperations();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00182.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00182.html">CodeGenerator</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        uint32_t uu;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">float</span> d;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    } Converter32{};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        uint64_t uu;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> d;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    } Converter64{};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">enum</span> RulesForLabels {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        While = 0, Loop, If, Else, Block</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">enum</span> CompareType {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Reverse, Direct</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">struct </span>MASMCompareOperation {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> operation;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string directCompUnsigned;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::string reverseCompUnsigned;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::string directCompSigned;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::string reverseCompSigned;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="a00278.html">AST_Tree</a> _tree;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::ifstream _tableOfReservedWords;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> _funcTable;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a>* _currentBlock;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string _template;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string _asmCodeString;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::vector&lt;MASMCompareOperation&gt; _compareOperations;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::string _functionEndLabel;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _labelNum;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::stack&lt;std::string&gt; _breakLabels;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::stack&lt;std::string&gt; _ifEndLabels;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::stack&lt;RulesForLabels&gt; _rules;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::vector&lt;int&gt; _rulesCount;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::string Traversal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::string CheckRule(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> std::string &amp;exitLabel = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    std::string FunctionDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::string ReturnExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string FunctionParams(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::string VariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::string ArrayDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::string GroupVariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::string BinaryOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type, <span class="keywordtype">bool</span> isReverce = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string UnaryOperation(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::string LogicalOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> CompareType &amp;compare, <span class="keyword">const</span> std::string &amp;trueLabel, <span class="keyword">const</span> std::string &amp;falseLabel);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string CompareOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation,<span class="keyword">const</span> CompareType &amp;compare, <span class="keyword">const</span> std::string &amp;trueLabel, <span class="keyword">const</span> std::string &amp;falseLabel);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string ArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::string MemberArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;ind);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::string MemberArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;indNode);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::string IDAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string AssignmentByValue(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;value);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string AssignmentFromStack(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string GetLocalVariables(<span class="keyword">const</span> <a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a> &amp;programBlock);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string TryOptimizedWithPush(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string Print(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string FmtString(<span class="keyword">const</span> std::string &amp;sourceStr, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::string PrintArray(<span class="keyword">const</span> <a class="code" href="a00202.html">MasmArray_Data</a> &amp;arrayData);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::string CallPrintf(<span class="keyword">const</span> std::string &amp;fmtString, std::stack&lt;std::string&gt; parameters);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::string IfExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string LoopExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::string WhileExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string CalculateExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string CalculateLiteral(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string CalculateIdentifier(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string CalculateMemberExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::string FunctionInvoke(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;pNode);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::string GetCompareOperation(<span class="keyword">const</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> &amp;operation, <span class="keyword">const</span> CompareType &amp;compareType, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> HasIDInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> HasArrInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> HasInReservedWordsTable(std::string identifier);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">float</span> BinaryOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">float</span> BinaryCompOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">float</span> LogicalCompOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">float</span> Optimized(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    uint32_t FloatToHex(<span class="keywordtype">float</span> value);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    uint64_t DoubleToHex(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::pair&lt;MASMType, std::string&gt; DetermineType(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::pair&lt;bool, std::string&gt; GetUID(<a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a>* <span class="keyword">const</span> &amp;block, <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::pair&lt;std::string, std::string&gt; PushReal8(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::pair&lt;std::string, std::string&gt; PushReal8(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::pair&lt;bool, unsigned int&gt; HasInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::pair&lt;MASMType, std::string&gt; <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;typeNode);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="a00198.html">MasmID_Data</a>&amp; GetID(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="a00202.html">MasmArray_Data</a>&amp; GetArr(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00182.html#ab367c2e441a3dbbdd13d19188b192c7f">CodeGenerator</a>(<span class="keyword">const</span> <a class="code" href="a00278.html">AST_Tree</a> &amp;tree, <span class="keyword">const</span> <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> &amp;funcTable);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    ~<a class="code" href="a00182.html">CodeGenerator</a>();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00182.html#a5e6992f09ae9391e350141b4ff503246">Generate</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CreateAsmFile</a>();</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_CODEGENERATOR_H</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> InitCompareOperations();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string FunctionDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::string ReturnExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::string FunctionParams(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::string VariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::string ArrayDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string GroupVariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::string BinaryOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type, <span class="keywordtype">bool</span> isReverce = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string UnaryOperation(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string LogicalOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation, <span class="keyword">const</span> CompareType &amp;compare, <span class="keyword">const</span> std::string &amp;trueLabel, <span class="keyword">const</span> std::string &amp;falseLabel);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::string CompareOperation(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation,<span class="keyword">const</span> CompareType &amp;compare, <span class="keyword">const</span> std::string &amp;trueLabel, <span class="keyword">const</span> std::string &amp;falseLabel);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::string ArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::string MemberArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;ind);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string MemberArrayAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;indNode);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string IDAssignment(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string AssignmentByValue(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;value);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string AssignmentFromStack(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string GetLocalVariables(<span class="keyword">const</span> <a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a> &amp;programBlock);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string TryOptimizedWithPush(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::string Print(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::string FmtString(<span class="keyword">const</span> std::string &amp;sourceStr, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::string PrintArray(<span class="keyword">const</span> <a class="code" href="a00202.html">MasmArray_Data</a> &amp;arrayData);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string CallPrintf(<span class="keyword">const</span> std::string &amp;fmtString, std::stack&lt;std::string&gt; parameters);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::string IfExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string LoopExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string WhileExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;<a class="code" href="a00286.html">Node</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string CalculateExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;expression, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string CalculateLiteral(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::string CalculateIdentifier(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::string CalculateMemberExpression(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::string FunctionInvoke(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;pNode);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::string GetCompareOperation(<span class="keyword">const</span> <a class="code" href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> &amp;operation, <span class="keyword">const</span> CompareType &amp;compareType, <span class="keyword">const</span> <a class="code" href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a> &amp;type);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> HasIDInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> HasArrInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> HasInReservedWordsTable(std::string identifier);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">float</span> BinaryOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">float</span> BinaryCompOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">float</span> LogicalCompOperation(<span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;operation);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">float</span> Optimized(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    uint32_t FloatToHex(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    uint64_t DoubleToHex(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::pair&lt;MASMType, std::string&gt; DetermineType(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::pair&lt;bool, std::string&gt; GetUID(<a class="code" href="a00294.html">ProgramBlock&lt;MasmID_Data, MasmArray_Data&gt;</a>* <span class="keyword">const</span> &amp;block, <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::pair&lt;std::string, std::string&gt; PushReal8(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::pair&lt;std::string, std::string&gt; PushReal8(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::pair&lt;bool, unsigned int&gt; HasInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::pair&lt;MASMType, std::string&gt; <a class="code" href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;typeNode);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="a00198.html">MasmID_Data</a>&amp; GetID(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="a00202.html">MasmArray_Data</a>&amp; GetArr(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00182.html#ab367c2e441a3dbbdd13d19188b192c7f">CodeGenerator</a>(<span class="keyword">const</span> <a class="code" href="a00278.html">AST_Tree</a> &amp;tree, <span class="keyword">const</span> <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> &amp;funcTable);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    ~<a class="code" href="a00182.html">CodeGenerator</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00182.html#a5e6992f09ae9391e350141b4ff503246">Generate</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CreateAsmFile</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_CODEGENERATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MasmTypeData.h</a></div></div>
@@ -222,17 +223,17 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 <div class="ttc" id="aa00182_html_ab367c2e441a3dbbdd13d19188b192c7f"><div class="ttname"><a href="a00182.html#ab367c2e441a3dbbdd13d19188b192c7f">CodeGenerator::CodeGenerator</a></div><div class="ttdeci">CodeGenerator(const AST_Tree &amp;tree, const Table&lt; Function_Data &gt; &amp;funcTable)</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:3</div></div>
 <div class="ttc" id="aa00182_html_a5e6992f09ae9391e350141b4ff503246"><div class="ttname"><a href="a00182.html#a5e6992f09ae9391e350141b4ff503246">CodeGenerator::Generate</a></div><div class="ttdeci">void Generate()</div><div class="ttdoc">запуск генерации кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:79</div></div>
 <div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">тип переменной на входном языке</div><div class="ttdef"><b>Definition:</b> TypeData.h:9</div></div>
-<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">CodeGenerator</a></div><div class="ttdoc">класс генерации ассемблерного кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.h:18</div></div>
+<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">CodeGenerator</a></div><div class="ttdoc">класс генерации ассемблерного кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.h:20</div></div>
 <div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">Table&lt; Function_Data &gt;</a></div></div>
 <div class="ttc" id="aa00182_html_aabff1a74359717ed0619a37d86b3f34d"><div class="ttname"><a href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CodeGenerator::CreateAsmFile</a></div><div class="ttdeci">void CreateAsmFile()</div><div class="ttdoc">создание ассемблерного файла</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:1337</div></div>
 <div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdoc">тип покена</div><div class="ttdef"><b>Definition:</b> TokenType.h:8</div></div>
 <div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MasmID_Data</a></div><div class="ttdoc">описывает переменную в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:17</div></div>
-<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:9</div></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:11</div></div>
 <div class="ttc" id="aa00294_html"><div class="ttname"><a href="a00294.html">ProgramBlock&lt; MasmID_Data, MasmArray_Data &gt;</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_807f156248ce581aedf65e5c746537c0.html">CodeGenerator</a></li><li class="navelem"><b>CodeGenerator.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_807f156248ce581aedf65e5c746537c0.html">CodeGenerator</a></li><li class="navelem"><a class="el" href="a00041.html">CodeGenerator.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

@@ -88,36 +88,38 @@ $(document).ready(function(){initNavTree('a00074_source.html',''); initResizable
 <div class="title">IgnoreState.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_IGNORESTATE_H</span></div>
+<a href="a00074.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_IGNORESTATE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_IGNORESTATE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;State.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00098.html">State.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="a00238.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00238.html">IgnoreState</a> : <span class="keyword">public</span> <a class="code" href="a00254.html">State</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string _ignoreSymbols = <span class="stringliteral">&quot; \n\r\t&quot;</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="a00238.html">IgnoreState</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00238.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">Contains</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00238.html#a71358e1fb822bbc5439e2f8fd9343682">CanTransitTo</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00238.html#a2c20107c7b28912d2f725ba2cf1f5d74">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_IGNORESTATE_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="a00238.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00238.html">IgnoreState</a> : <span class="keyword">public</span> <a class="code" href="a00254.html">State</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::string _ignoreSymbols = <span class="stringliteral">&quot; \n\r\t&quot;</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~<a class="code" href="a00238.html">IgnoreState</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00238.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">Contains</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00238.html#a71358e1fb822bbc5439e2f8fd9343682">CanTransitTo</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00238.html#a2c20107c7b28912d2f725ba2cf1f5d74">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_IGNORESTATE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:11</div></div>
-<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
+<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
+<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
 <div class="ttc" id="aa00238_html_a71358e1fb822bbc5439e2f8fd9343682"><div class="ttname"><a href="a00238.html#a71358e1fb822bbc5439e2f8fd9343682">IgnoreState::CanTransitTo</a></div><div class="ttdeci">bool CanTransitTo(char sym) override</div><div class="ttdoc">проверяет возмжность перехода в текущее состояние по входящему символу</div><div class="ttdef"><b>Definition:</b> IgnoreState.cpp:7</div></div>
-<div class="ttc" id="aa00238_html"><div class="ttname"><a href="a00238.html">IgnoreState</a></div><div class="ttdoc">состояние игнорируемых символов</div><div class="ttdef"><b>Definition:</b> IgnoreState.h:9</div></div>
+<div class="ttc" id="aa00238_html"><div class="ttname"><a href="a00238.html">IgnoreState</a></div><div class="ttdoc">состояние игнорируемых символов</div><div class="ttdef"><b>Definition:</b> IgnoreState.h:11</div></div>
 <div class="ttc" id="aa00238_html_a2c20107c7b28912d2f725ba2cf1f5d74"><div class="ttname"><a href="a00238.html#a2c20107c7b28912d2f725ba2cf1f5d74">IgnoreState::GetToken</a></div><div class="ttdeci">Token * GetToken(const std::string &amp;value) override</div><div class="ttdoc">возвращает токен из текущего состояния</div><div class="ttdef"><b>Definition:</b> IgnoreState.cpp:11</div></div>
 <div class="ttc" id="aa00238_html_a0c34a1bed7c4e24bb6730b9b6b3e1e56"><div class="ttname"><a href="a00238.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">IgnoreState::Contains</a></div><div class="ttdeci">bool Contains(char sym) override</div><div class="ttdef"><b>Definition:</b> IgnoreState.cpp:3</div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">State.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><b>IgnoreState.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00074.html">IgnoreState.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

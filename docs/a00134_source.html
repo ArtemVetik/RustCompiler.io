@@ -88,47 +88,48 @@ $(document).ready(function(){initNavTree('a00134_source.html',''); initResizable
 <div class="title">AST_Tree.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_AST_TREE_H</span></div>
+<a href="a00134.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_AST_TREE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_AST_TREE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00140.html">Node.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;forward_list&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="a00278.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00278.html">AST_Tree</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="a00286.html">Node</a>* _root;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00278.html">AST_Tree</a>(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; root = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    ~<a class="code" href="a00278.html">AST_Tree</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    [[nodiscard]] <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; <a class="code" href="a00278.html#aa8bb4a53e389f05604c7be4534647e26">GetRoot</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00278.html#aafa7ede65e1e0104ffbe017f21472b7a">Print</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">   24</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">DeleteNode</a>(T&amp; ... nodes) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;node : std::forward_list&lt;std::reference_wrapper&lt;Node*&gt;&gt;{nodes...}) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (node.get()) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keyword">delete</span> node.get();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                node.get() = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_AST_TREE_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="a00278.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00278.html">AST_Tree</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="a00286.html">Node</a>* _root;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00278.html">AST_Tree</a>(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; root = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="a00278.html">AST_Tree</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    [[nodiscard]] <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; <a class="code" href="a00278.html#aa8bb4a53e389f05604c7be4534647e26">GetRoot</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00278.html#aafa7ede65e1e0104ffbe017f21472b7a">Print</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">   26</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">DeleteNode</a>(T&amp; ... nodes) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;node : std::forward_list&lt;std::reference_wrapper&lt;Node*&gt;&gt;{nodes...}) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (node.get()) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keyword">delete</span> node.get();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                node.get() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_AST_TREE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00286_html"><div class="ttname"><a href="a00286.html">Node</a></div><div class="ttdoc">вершина дерева</div><div class="ttdef"><b>Definition:</b> Node.h:31</div></div>
-<div class="ttc" id="aa00278_html_a1e228d816343ae03bcbe7d7e467a44db"><div class="ttname"><a href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">AST_Tree::DeleteNode</a></div><div class="ttdeci">static void DeleteNode(T &amp;... nodes)</div><div class="ttdoc">удаление вершин</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:24</div></div>
+<div class="ttc" id="aa00278_html_a1e228d816343ae03bcbe7d7e467a44db"><div class="ttname"><a href="a00278.html#a1e228d816343ae03bcbe7d7e467a44db">AST_Tree::DeleteNode</a></div><div class="ttdeci">static void DeleteNode(T &amp;... nodes)</div><div class="ttdoc">удаление вершин</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:26</div></div>
 <div class="ttc" id="aa00278_html_aafa7ede65e1e0104ffbe017f21472b7a"><div class="ttname"><a href="a00278.html#aafa7ede65e1e0104ffbe017f21472b7a">AST_Tree::Print</a></div><div class="ttdeci">void Print() const</div><div class="ttdoc">вывод дерева</div><div class="ttdef"><b>Definition:</b> AST_Tree.cpp:11</div></div>
 <div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">Node.h</a></div></div>
 <div class="ttc" id="aa00278_html_aa8bb4a53e389f05604c7be4534647e26"><div class="ttname"><a href="a00278.html#aa8bb4a53e389f05604c7be4534647e26">AST_Tree::GetRoot</a></div><div class="ttdeci">Node *const  &amp; GetRoot() const</div><div class="ttdef"><b>Definition:</b> AST_Tree.cpp:7</div></div>
-<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:9</div></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:11</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_2add7b569fec196d24e9df17c0cf0381.html">Parser</a></li><li class="navelem"><a class="el" href="dir_d143206a9c10dbe01cc2d567bd281a56.html">AST_Tree</a></li><li class="navelem"><b>AST_Tree.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_2add7b569fec196d24e9df17c0cf0381.html">Parser</a></li><li class="navelem"><a class="el" href="dir_d143206a9c10dbe01cc2d567bd281a56.html">AST_Tree</a></li><li class="navelem"><a class="el" href="a00134.html">AST_Tree.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

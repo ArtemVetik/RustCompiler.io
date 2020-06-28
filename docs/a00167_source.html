@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('a00167_source.html',''); initResizable
 <div class="title">Table.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_TABLE_H</span></div>
+<a href="a00167.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_TABLE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_TABLE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
@@ -96,58 +96,59 @@ $(document).ready(function(){initNavTree('a00167_source.html',''); initResizable
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00306.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00306.html">Table</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::vector&lt;T&gt; _table;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> AddToTable(<span class="keyword">const</span> T &amp;data);</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">   20</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Has</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">   22</a></span>&#160;    T&amp; <a class="code" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">GetData</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> std::vector&lt;T&gt; &amp;GetTable() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">   25</a></span>&#160;    T <a class="code" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Back</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00306.html">Table&lt;T&gt;::AddToTable</a>(<span class="keyword">const</span> T &amp;data) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    _table.emplace_back(data);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">   34</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Table&lt;T&gt;::Has</a>(<span class="keyword">const</span> std::string &amp;value)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> std::find(_table.cbegin(), _table.cend(), value) != _table.cend();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">   39</a></span>&#160;T &amp;<a class="code" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">Table&lt;T&gt;::GetData</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">auto</span> data = std::find(_table.cbegin(), _table.cend(), <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (data == _table.cend())</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">throw</span> <span class="stringliteral">&quot;Table _error:\n\tUnable to get data&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> _table[std::distance(_table.cbegin(), data)];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">const</span> std::vector&lt;T&gt; &amp;<a class="code" href="a00306.html">Table&lt;T&gt;::GetTable</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> _table;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">   52</a></span>&#160;T <a class="code" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Table&lt;T&gt;::Back</a>() {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> _table.back();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_TABLE_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="a00306.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00306.html">Table</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::vector&lt;T&gt; _table;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> AddToTable(<span class="keyword">const</span> T &amp;data);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">   22</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Has</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">   24</a></span>&#160;    T&amp; <a class="code" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">GetData</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> std::vector&lt;T&gt; &amp;GetTable() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">   27</a></span>&#160;    T <a class="code" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Back</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00306.html">Table&lt;T&gt;::AddToTable</a>(<span class="keyword">const</span> T &amp;data) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    _table.emplace_back(data);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">   36</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Table&lt;T&gt;::Has</a>(<span class="keyword">const</span> std::string &amp;value)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> std::find(_table.cbegin(), _table.cend(), value) != _table.cend();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">   41</a></span>&#160;T &amp;<a class="code" href="a00306.html#affbfff60800c6a31ed971d0d691662e1">Table&lt;T&gt;::GetData</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">auto</span> data = std::find(_table.cbegin(), _table.cend(), <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (data == _table.cend())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">throw</span> <span class="stringliteral">&quot;Table _error:\n\tUnable to get data&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> _table[std::distance(_table.cbegin(), data)];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">const</span> std::vector&lt;T&gt; &amp;<a class="code" href="a00306.html">Table&lt;T&gt;::GetTable</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> _table;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">   54</a></span>&#160;T <a class="code" href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Table&lt;T&gt;::Back</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> _table.back();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_TABLE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00306_html_a92bf6c6040249af96bf21702f67088ef"><div class="ttname"><a href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Table::Back</a></div><div class="ttdeci">T Back()</div><div class="ttdef"><b>Definition:</b> Table.h:52</div></div>
-<div class="ttc" id="aa00306_html_a3c3b202793188c1674d647e9a41e1e2f"><div class="ttname"><a href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Table::Has</a></div><div class="ttdeci">bool Has(const std::string &amp;value) const</div><div class="ttdef"><b>Definition:</b> Table.h:34</div></div>
-<div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">Table</a></div><div class="ttdoc">таблица данных</div><div class="ttdef"><b>Definition:</b> Table.h:12</div></div>
-<div class="ttc" id="aa00306_html_affbfff60800c6a31ed971d0d691662e1"><div class="ttname"><a href="a00306.html#affbfff60800c6a31ed971d0d691662e1">Table::GetData</a></div><div class="ttdeci">T &amp; GetData(const std::string &amp;id)</div><div class="ttdef"><b>Definition:</b> Table.h:39</div></div>
+<div class="ttc" id="aa00306_html_a92bf6c6040249af96bf21702f67088ef"><div class="ttname"><a href="a00306.html#a92bf6c6040249af96bf21702f67088ef">Table::Back</a></div><div class="ttdeci">T Back()</div><div class="ttdef"><b>Definition:</b> Table.h:54</div></div>
+<div class="ttc" id="aa00306_html_a3c3b202793188c1674d647e9a41e1e2f"><div class="ttname"><a href="a00306.html#a3c3b202793188c1674d647e9a41e1e2f">Table::Has</a></div><div class="ttdeci">bool Has(const std::string &amp;value) const</div><div class="ttdef"><b>Definition:</b> Table.h:36</div></div>
+<div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">Table</a></div><div class="ttdoc">таблица данных</div><div class="ttdef"><b>Definition:</b> Table.h:14</div></div>
+<div class="ttc" id="aa00306_html_affbfff60800c6a31ed971d0d691662e1"><div class="ttname"><a href="a00306.html#affbfff60800c6a31ed971d0d691662e1">Table::GetData</a></div><div class="ttdeci">T &amp; GetData(const std::string &amp;id)</div><div class="ttdef"><b>Definition:</b> Table.h:41</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_275bb1d0e905a25e0bbd03c40a1809f0.html">Semantics</a></li><li class="navelem"><b>Table.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_275bb1d0e905a25e0bbd03c40a1809f0.html">Semantics</a></li><li class="navelem"><a class="el" href="a00167.html">Table.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

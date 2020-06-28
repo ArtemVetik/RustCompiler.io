@@ -88,38 +88,40 @@ $(document).ready(function(){initNavTree('a00098_source.html',''); initResizable
 <div class="title">State.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_STATE_H</span></div>
+<a href="a00098.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_STATE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_STATE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00119.html">TokenType.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Token.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00116.html">Token.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="a00254.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00254.html">State</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">   15</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">Contains</a>(<span class="keywordtype">char</span> sym) = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">   19</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">CanTransitTo</a>(<span class="keywordtype">char</span> sym) = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">   23</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">CanTransitTo</a>(<a class="code" href="a00254.html">State</a>* <span class="keyword">const</span> &amp;to)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">   26</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a00254.html">State</a>() = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_STATE_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="a00254.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00254.html">State</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">   17</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">Contains</a>(<span class="keywordtype">char</span> sym) = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">   21</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">CanTransitTo</a>(<span class="keywordtype">char</span> sym) = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">   25</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">CanTransitTo</a>(<a class="code" href="a00254.html">State</a>* <span class="keyword">const</span> &amp;to)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">   28</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a00254.html">State</a>() = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_STATE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">Token.h</a></div></div>
 <div class="ttc" id="aa00254_html_a09e828599a331b3ab9abf470da8d2b15"><div class="ttname"><a href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">State::CanTransitTo</a></div><div class="ttdeci">virtual bool CanTransitTo(char sym)=0</div><div class="ttdoc">проверяет возмжность перехода в текущее состояние по входящему символу</div></div>
-<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:11</div></div>
-<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
-<div class="ttc" id="aa00254_html_a73fd3e480b668342bf9fc5cbe3994708"><div class="ttname"><a href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">State::CanTransitTo</a></div><div class="ttdeci">virtual bool CanTransitTo(State *const &amp;to) const</div><div class="ttdoc">проверяет возмжность перехода в текущее состояние из другого состояния</div><div class="ttdef"><b>Definition:</b> State.h:23</div></div>
+<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
+<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
+<div class="ttc" id="aa00254_html_a73fd3e480b668342bf9fc5cbe3994708"><div class="ttname"><a href="a00254.html#a73fd3e480b668342bf9fc5cbe3994708">State::CanTransitTo</a></div><div class="ttdeci">virtual bool CanTransitTo(State *const &amp;to) const</div><div class="ttdoc">проверяет возмжность перехода в текущее состояние из другого состояния</div><div class="ttdef"><b>Definition:</b> State.h:25</div></div>
 <div class="ttc" id="aa00254_html_ac7edb72fc5c3bf6e0d6905440e339b81"><div class="ttname"><a href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">State::Contains</a></div><div class="ttdeci">virtual bool Contains(char sym)=0</div></div>
 <div class="ttc" id="aa00119_html"><div class="ttname"><a href="a00119.html">TokenType.h</a></div></div>
 <div class="ttc" id="aa00254_html_aa9f74b4fd185ec2ee9a1c6b509fe92dd"><div class="ttname"><a href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">State::GetToken</a></div><div class="ttdeci">virtual Token * GetToken(const std::string &amp;value)=0</div><div class="ttdoc">возвращает токен из текущего состояния</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><b>State.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00098.html">State.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

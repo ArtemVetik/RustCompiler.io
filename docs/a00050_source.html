@@ -88,31 +88,33 @@ $(document).ready(function(){initNavTree('a00050_source.html',''); initResizable
 <div class="title">CodeGeneratorError.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_CODEGENERATORERROR_H</span></div>
+<a href="a00050.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_CODEGENERATORERROR_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_CODEGENERATORERROR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;BaseError.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00047.html">BaseError.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="a00210.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00210.html">CodeGeneratorError</a> : <span class="keyword">public</span> <a class="code" href="a00206.html">BaseError</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00210.html">CodeGeneratorError</a>(<span class="keyword">const</span> std::string &amp;error) : <a class="code" href="a00206.html">BaseError</a>(error, <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        _error = std::string(<span class="stringliteral">&quot;CodeGenerator error:\n\t&quot;</span>) +  error + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> * what () <span class="keyword">const</span> noexcept <span class="keyword">override</span> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> _error.c_str();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_CODEGENERATORERROR_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="a00210.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00210.html">CodeGeneratorError</a> : <span class="keyword">public</span> <a class="code" href="a00206.html">BaseError</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00210.html">CodeGeneratorError</a>(<span class="keyword">const</span> std::string &amp;error) : <a class="code" href="a00206.html">BaseError</a>(error, <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        _error = std::string(<span class="stringliteral">&quot;CodeGenerator error:\n\t&quot;</span>) +  error + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> * what () <span class="keyword">const</span> noexcept <span class="keyword">override</span> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> _error.c_str();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_CODEGENERATORERROR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00210_html"><div class="ttname"><a href="a00210.html">CodeGeneratorError</a></div><div class="ttdoc">ошибка на этапе генерации кода</div><div class="ttdef"><b>Definition:</b> CodeGeneratorError.h:7</div></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:10</div></div>
+<div class="ttc" id="aa00210_html"><div class="ttname"><a href="a00210.html">CodeGeneratorError</a></div><div class="ttdoc">ошибка на этапе генерации кода</div><div class="ttdef"><b>Definition:</b> CodeGeneratorError.h:9</div></div>
+<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:12</div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">BaseError.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b078da6c24fc28fec29d0f15108e9dad.html">Exceptions</a></li><li class="navelem"><b>CodeGeneratorError.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b078da6c24fc28fec29d0f15108e9dad.html">Exceptions</a></li><li class="navelem"><a class="el" href="a00050.html">CodeGeneratorError.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

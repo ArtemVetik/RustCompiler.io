@@ -88,95 +88,98 @@ $(document).ready(function(){initNavTree('a00158_source.html',''); initResizable
 <div class="title">SemanticAnalyzer.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_SEMANTICANALYZER_H</span></div>
+<a href="a00158.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_SEMANTICANALYZER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_SEMANTICANALYZER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Parser/AST_Tree/AST_Tree.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;SemanticErrorDebugger.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;ProgramBlock.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00164.html">SemanticErrorDebugger.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00152.html">ProgramBlock.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define Err SemanticErrorDebugger</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00298.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00298.html">SemanticAnalyzer</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="a00286.html">Node</a>* _root;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> _functionTable;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="a00294.html">ProgramBlock&lt;ID_Data, Array_Data&gt;</a> *_currentBlock;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> AddSystemFunctions();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="a00298.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00298.html">SemanticAnalyzer</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="a00286.html">Node</a>* _root;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> _functionTable;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="a00294.html">ProgramBlock&lt;ID_Data, Array_Data&gt;</a> *_currentBlock;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> Traversal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> CheckRule(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> VariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> ArrayDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> FunctionDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> Assignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> VariableAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> ArrayAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> MemberAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> Condition(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> CheckInits(<span class="keyword">const</span> <a class="code" href="a00294.html">ProgramBlock&lt;ID_Data, Array_Data&gt;</a> &amp;pBlock);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> ReturnExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;returnNode);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> Print(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> CalculateConstUnsignedExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> std::vector&lt;RuleType&gt; &amp;forbiddenRule = std::vector&lt;RuleType&gt;());</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> BinaryOperation(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;left, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;right, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> HasIDInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> HasArrInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::vector&lt;ID_Data&gt; GroupLetVarDeclaration(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::vector&lt;TypeData&gt; GroupInit(std::vector&lt;ID_Data&gt; variables, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::vector&lt;TypeData&gt; ArrayElems(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::vector&lt;std::pair&lt;TypeData, bool&gt;&gt; FunctionInvokeParams(<span class="keyword">const</span> std::string &amp;funcId, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::pair&lt;TypeData, bool&gt; Expr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::pair&lt;TypeData, bool&gt; BoolExpr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::pair&lt;TypeData, bool&gt; MinTerminal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::pair&lt;TypeData, bool&gt; InternalFunctionInvoke(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::pair&lt;bool, unsigned int&gt; HasInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a00326.html">TypeData</a> MemberExpr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="a00326.html">TypeData</a> FunctionInvoke(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="a00326.html">TypeData</a> CanAccessIdentifier(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;idNode);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="a00326.html">TypeData</a> CanAccessArray(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;idNode);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="a00326.html">TypeData</a> GetTypeData(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;typeNode);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00314.html">ID_Data</a> GetIDDefineParameter(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;param);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="a00314.html">ID_Data</a> Pat(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="a00318.html">Array_Data</a> GetArrayDefineParameter(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;param);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00314.html">ID_Data</a>&amp; GetID(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00318.html">Array_Data</a>&amp; GetArr(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00298.html#a4f7c39b5e6e10582676dfc78f0e0c1ed">SemanticAnalyzer</a>(<span class="keyword">const</span> <a class="code" href="a00278.html">AST_Tree</a> &amp;tree);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ~<a class="code" href="a00298.html">SemanticAnalyzer</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00298.html#a29ccf0822e47cc94a09d0ae13a899682">Analyze</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    [[nodiscard]] <span class="keyword">const</span> <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> &amp;<a class="code" href="a00298.html#af7e937b5e302c3cc94f1ccf7a8edfe19">GetFunctionTable</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_SEMANTICANALYZER_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> AddSystemFunctions();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> Traversal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> CheckRule(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> VariableDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> ArrayDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> FunctionDeclaration(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> Assignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> VariableAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> ArrayAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> MemberAssignment(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span>&amp; idNode, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;exprNode);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> Condition(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> CheckInits(<span class="keyword">const</span> <a class="code" href="a00294.html">ProgramBlock&lt;ID_Data, Array_Data&gt;</a> &amp;pBlock);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> ReturnExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;returnNode);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> Print(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> CalculateConstUnsignedExpression(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node, <span class="keyword">const</span> std::vector&lt;RuleType&gt; &amp;forbiddenRule = std::vector&lt;RuleType&gt;());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> BinaryOperation(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;left, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;right, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> HasIDInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> HasArrInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::vector&lt;ID_Data&gt; GroupLetVarDeclaration(<a class="code" href="a00286.html">Node</a> *<span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::vector&lt;TypeData&gt; GroupInit(std::vector&lt;ID_Data&gt; variables, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::vector&lt;TypeData&gt; ArrayElems(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::vector&lt;std::pair&lt;TypeData, bool&gt;&gt; FunctionInvokeParams(<span class="keyword">const</span> std::string &amp;funcId, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::pair&lt;TypeData, bool&gt; Expr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::pair&lt;TypeData, bool&gt; BoolExpr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::pair&lt;TypeData, bool&gt; MinTerminal(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::pair&lt;TypeData, bool&gt; InternalFunctionInvoke(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::pair&lt;bool, unsigned int&gt; HasInUpper(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="a00326.html">TypeData</a> MemberExpr(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="a00326.html">TypeData</a> FunctionInvoke(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="a00326.html">TypeData</a> CanAccessIdentifier(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;idNode);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="a00326.html">TypeData</a> CanAccessArray(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;idNode);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00326.html">TypeData</a> GetTypeData(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;typeNode);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="a00314.html">ID_Data</a> GetIDDefineParameter(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;param);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00314.html">ID_Data</a> Pat(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;node);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00318.html">Array_Data</a> GetArrayDefineParameter(<a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;param);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="a00314.html">ID_Data</a>&amp; GetID(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="a00318.html">Array_Data</a>&amp; GetArr(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>, <a class="code" href="a00286.html">Node</a>* <span class="keyword">const</span> &amp;root);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00298.html#a4f7c39b5e6e10582676dfc78f0e0c1ed">SemanticAnalyzer</a>(<span class="keyword">const</span> <a class="code" href="a00278.html">AST_Tree</a> &amp;tree);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ~<a class="code" href="a00298.html">SemanticAnalyzer</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00298.html#a29ccf0822e47cc94a09d0ae13a899682">Analyze</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    [[nodiscard]] <span class="keyword">const</span> <a class="code" href="a00306.html">Table&lt;Function_Data&gt;</a> &amp;<a class="code" href="a00298.html#af7e937b5e302c3cc94f1ccf7a8edfe19">GetFunctionTable</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_SEMANTICANALYZER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00286_html"><div class="ttname"><a href="a00286.html">Node</a></div><div class="ttdoc">вершина дерева</div><div class="ttdef"><b>Definition:</b> Node.h:31</div></div>
+<div class="ttc" id="aa00152_html"><div class="ttname"><a href="a00152.html">ProgramBlock.h</a></div></div>
 <div class="ttc" id="aa00318_html"><div class="ttname"><a href="a00318.html">Array_Data</a></div><div class="ttdoc">данные массива</div><div class="ttdef"><b>Definition:</b> TableData.h:48</div></div>
 <div class="ttc" id="aa00326_html"><div class="ttname"><a href="a00326.html">TypeData</a></div><div class="ttdoc">Данный о типе</div><div class="ttdef"><b>Definition:</b> TypeData.h:22</div></div>
 <div class="ttc" id="aa00314_html"><div class="ttname"><a href="a00314.html">ID_Data</a></div><div class="ttdoc">данные переменной</div><div class="ttdef"><b>Definition:</b> TableData.h:33</div></div>
 <div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">Table&lt; Function_Data &gt;</a></div></div>
+<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">SemanticErrorDebugger.h</a></div></div>
 <div class="ttc" id="aa00298_html_af7e937b5e302c3cc94f1ccf7a8edfe19"><div class="ttname"><a href="a00298.html#af7e937b5e302c3cc94f1ccf7a8edfe19">SemanticAnalyzer::GetFunctionTable</a></div><div class="ttdeci">const Table&lt; Function_Data &gt; &amp; GetFunctionTable() const</div><div class="ttdef"><b>Definition:</b> SemanticAnalyzer.cpp:684</div></div>
 <div class="ttc" id="aa00298_html_a4f7c39b5e6e10582676dfc78f0e0c1ed"><div class="ttname"><a href="a00298.html#a4f7c39b5e6e10582676dfc78f0e0c1ed">SemanticAnalyzer::SemanticAnalyzer</a></div><div class="ttdeci">SemanticAnalyzer(const AST_Tree &amp;tree)</div><div class="ttdef"><b>Definition:</b> SemanticAnalyzer.cpp:3</div></div>
-<div class="ttc" id="aa00298_html"><div class="ttname"><a href="a00298.html">SemanticAnalyzer</a></div><div class="ttdoc">семантический анализатор</div><div class="ttdef"><b>Definition:</b> SemanticAnalyzer.h:12</div></div>
-<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:9</div></div>
+<div class="ttc" id="aa00298_html"><div class="ttname"><a href="a00298.html">SemanticAnalyzer</a></div><div class="ttdoc">семантический анализатор</div><div class="ttdef"><b>Definition:</b> SemanticAnalyzer.h:14</div></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:11</div></div>
 <div class="ttc" id="aa00298_html_a29ccf0822e47cc94a09d0ae13a899682"><div class="ttname"><a href="a00298.html#a29ccf0822e47cc94a09d0ae13a899682">SemanticAnalyzer::Analyze</a></div><div class="ttdeci">void Analyze()</div><div class="ttdoc">запускает семантический анализ</div><div class="ttdef"><b>Definition:</b> SemanticAnalyzer.cpp:19</div></div>
 <div class="ttc" id="aa00294_html"><div class="ttname"><a href="a00294.html">ProgramBlock&lt; ID_Data, Array_Data &gt;</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_275bb1d0e905a25e0bbd03c40a1809f0.html">Semantics</a></li><li class="navelem"><b>SemanticAnalyzer.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_275bb1d0e905a25e0bbd03c40a1809f0.html">Semantics</a></li><li class="navelem"><a class="el" href="a00158.html">SemanticAnalyzer.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
