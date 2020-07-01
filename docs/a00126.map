@@ -1,20 +1,20 @@
 <map id="D:/CLionProgects/RustCompiler/Lexer/Transition.h" name="D:/CLionProgects/RustCompiler/Lexer/Transition.h">
-<area shape="rect" id="node1" title=" " alt="" coords="471,5,677,47"/>
-<area shape="rect" id="node2" href="$a00098.html" title=" " alt="" coords="625,169,689,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="647,393,701,420"/>
-<area shape="rect" id="node10" href="$a00068.html" title=" " alt="" coords="316,95,392,121"/>
-<area shape="rect" id="node11" title=" " alt="" coords="326,169,382,196"/>
-<area shape="rect" id="node12" href="$a00086.html" title=" " alt="" coords="611,95,702,121"/>
-<area shape="rect" id="node13" href="$a00074.html" title=" " alt="" coords="849,95,947,121"/>
-<area shape="rect" id="node14" href="$a00110.html" title=" " alt="" coords="726,95,825,121"/>
-<area shape="rect" id="node15" href="$a00092.html" title=" " alt="" coords="417,95,537,121"/>
-<area shape="rect" id="node16" href="$a00053.html" title=" " alt="" coords="71,95,234,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="754,319,826,345"/>
-<area shape="rect" id="node4" title=" " alt="" coords="701,244,775,271"/>
-<area shape="rect" id="node5" href="$a00119.html" title=" " alt="" coords="583,319,679,345"/>
-<area shape="rect" id="node7" href="$a00116.html" title=" " alt="" coords="499,244,567,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="506,319,559,345"/>
-<area shape="rect" id="node9" href="$a00062.html" title=" " alt="" coords="211,319,431,345"/>
-<area shape="rect" id="node17" href="$a00047.html" title=" " alt="" coords="95,169,186,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="503,5,709,47"/>
+<area shape="rect" id="node2" href="$a00104.html" title=" " alt="" coords="657,169,763,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="707,393,761,420"/>
+<area shape="rect" id="node10" href="$a00080.html" title=" " alt="" coords="263,95,381,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="294,169,350,196"/>
+<area shape="rect" id="node12" href="$a00092.html" title=" " alt="" coords="643,95,777,121"/>
+<area shape="rect" id="node13" href="$a00086.html" title=" " alt="" coords="966,95,1107,121"/>
+<area shape="rect" id="node14" href="$a00110.html" title=" " alt="" coords="801,95,941,121"/>
+<area shape="rect" id="node15" href="$a00098.html" title=" " alt="" coords="406,95,569,121"/>
+<area shape="rect" id="node16" href="$a00053.html" title=" " alt="" coords="25,95,187,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="823,319,895,345"/>
+<area shape="rect" id="node4" title=" " alt="" coords="773,244,847,271"/>
+<area shape="rect" id="node5" href="$a00119.html" title=" " alt="" coords="635,319,743,345"/>
+<area shape="rect" id="node7" href="$a00116.html" title=" " alt="" coords="543,244,623,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="557,319,610,345"/>
+<area shape="rect" id="node9" href="$a00062.html" title=" " alt="" coords="261,319,481,345"/>
+<area shape="rect" id="node17" href="$a00047.html" title=" " alt="" coords="77,169,167,196"/>
 <area shape="rect" id="node18" title=" " alt="" coords="5,244,84,271"/>
 </map>

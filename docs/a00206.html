@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00206.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>базовый класс ошибок компилятора  
+<p>Базовый класс ошибок компилятора  
  <a href="a00206.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="a00047_source.html">BaseError.h</a>&gt;</code></p>
@@ -102,11 +102,11 @@ $(document).ready(function(){initNavTree('a00206.html',''); initResizable(); });
 <div class="dyncontent">
 <div class="center"><img src="a00205.png" border="0" usemap="#_base_error_inherit__map" alt="Inheritance graph"/></div>
 <map name="_base_error_inherit__map" id="_base_error_inherit__map">
-<area shape="rect" title="базовый класс ошибок компилятора" alt="" coords="214,80,294,107"/>
-<area shape="rect" href="a00210.html" title="ошибка на этапе генерации кода" alt="" coords="5,155,143,181"/>
-<area shape="rect" href="a00214.html" title="ошибка на этапе лексического анализа" alt="" coords="167,155,237,181"/>
-<area shape="rect" href="a00218.html" title="ошибка на этапе синтаксического анализа" alt="" coords="262,155,350,181"/>
-<area shape="rect" href="a00222.html" title="ошибка на этапе семантического анализа" alt="" coords="375,155,480,181"/>
+<area shape="rect" title="Базовый класс ошибок компилятора" alt="" coords="214,80,294,107"/>
+<area shape="rect" href="a00210.html" title="Ошибка на этапе генерации кода" alt="" coords="5,155,143,181"/>
+<area shape="rect" href="a00214.html" title="Ошибка на этапе лексического анализа" alt="" coords="167,155,237,181"/>
+<area shape="rect" href="a00218.html" title="Ошибка на этапе синтаксического анализа" alt="" coords="262,155,350,181"/>
+<area shape="rect" href="a00222.html" title="Ошибка на этапе семантического анализа" alt="" coords="375,155,480,181"/>
 <area shape="rect" title=" " alt="" coords="202,5,306,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
@@ -115,10 +115,10 @@ $(document).ready(function(){initNavTree('a00206.html',''); initResizable(); });
 <div class="dyncontent">
 <div class="center"><img src="a00204.png" border="0" usemap="#_base_error_coll__map" alt="Collaboration graph"/></div>
 <map name="_base_error_coll__map" id="_base_error_coll__map">
-<area shape="rect" title="базовый класс ошибок компилятора" alt="" coords="60,199,140,225"/>
+<area shape="rect" title="Базовый класс ошибок компилятора" alt="" coords="60,199,140,225"/>
 <area shape="rect" title=" " alt="" coords="5,109,109,136"/>
-<area shape="rect" href="a00230.html" title="позиция токена" alt="" coords="133,109,240,136"/>
-<area shape="rect" href="a00226.html" title="позиция символа в файле" alt="" coords="123,5,251,32"/>
+<area shape="rect" href="a00230.html" title="Позиция токена" alt="" coords="133,109,240,136"/>
+<area shape="rect" href="a00226.html" title="Позиция символа в файле" alt="" coords="123,5,251,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('a00206.html',''); initResizable(); });
 <tr class="separator:aacb04e0e547c22dc4bc5beb7cc4cc59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e4e53381f7f8775e43f5dc3f3655e6"><td class="memItemLeft" align="right" valign="top"><a id="ac6e4e53381f7f8775e43f5dc3f3655e6"></a>
 const <a class="el" href="a00230.html">TokenLocation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ac6e4e53381f7f8775e43f5dc3f3655e6">GetTokenLocation</a> () const</td></tr>
-<tr class="memdesc:ac6e4e53381f7f8775e43f5dc3f3655e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">возвращает позицию токена <br /></td></tr>
+<tr class="memdesc:ac6e4e53381f7f8775e43f5dc3f3655e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает позицию токена <br /></td></tr>
 <tr class="separator:ac6e4e53381f7f8775e43f5dc3f3655e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3235f097930a1cab5c722e1b2cbccb73"><td class="memItemLeft" align="right" valign="top"><a id="a3235f097930a1cab5c722e1b2cbccb73"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const noexcept override</td></tr>
@@ -148,7 +148,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_error</b></td
 <tr class="separator:a32f83ff75a2153e314b2bb584928b353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>базовый класс ошибок компилятора </p>
+<div class="textblock"><p>Базовый класс ошибок компилятора </p>
 </div><hr/>Объявления и описания членов класса находятся в файле:<ul>
 <li>D:/CLionProgects/RustCompiler/Exceptions/<a class="el" href="a00047_source.html">BaseError.h</a></li>
 </ul>

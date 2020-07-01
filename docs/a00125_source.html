@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -91,12 +91,12 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 <a href="a00125.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_TRANSITION_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_TRANSITION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00098.html">State.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00068.html">IDState.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00086.html">NumState.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00074.html">IgnoreState.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00110.html">StringState.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00092.html">SeparatorState.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00104.html">States/State.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00080.html">States/IDState.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00092.html">States/NumState.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00086.html">States/IgnoreState.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00110.html">States/StringState.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00098.html">States/SeparatorState.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../Exceptions/LexError.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
@@ -110,21 +110,21 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="a00274.html">Transition</a>();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="a00274.html">Transition</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="a00254.html">State</a>* <a class="code" href="a00274.html#a79b7200b3f0fe58bcfea3e21980ce0bf">GetState</a>(<a class="code" href="a00254.html">State</a>* <span class="keyword">const</span> &amp;currentState, <span class="keywordtype">char</span> symbol);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="a00258.html">State</a>* <a class="code" href="a00274.html#a79b7200b3f0fe58bcfea3e21980ce0bf">GetState</a>(<a class="code" href="a00258.html">State</a>* <span class="keyword">const</span> &amp;currentState, <span class="keywordtype">char</span> symbol);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_TRANSITION_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00086_html"><div class="ttname"><a href="a00086.html">NumState.h</a></div></div>
-<div class="ttc" id="aa00074_html"><div class="ttname"><a href="a00074.html">IgnoreState.h</a></div></div>
-<div class="ttc" id="aa00274_html"><div class="ttname"><a href="a00274.html">Transition</a></div><div class="ttdoc">класс, осузествляющий переходы между состояниями</div><div class="ttdef"><b>Definition:</b> Transition.h:17</div></div>
-<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
+<div class="ttc" id="aa00258_html"><div class="ttname"><a href="a00258.html">State</a></div><div class="ttdoc">Базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
+<div class="ttc" id="aa00086_html"><div class="ttname"><a href="a00086.html">IgnoreState.h</a></div></div>
+<div class="ttc" id="aa00274_html"><div class="ttname"><a href="a00274.html">Transition</a></div><div class="ttdoc">Класс, осузествляющий переходы между состояниями</div><div class="ttdef"><b>Definition:</b> Transition.h:17</div></div>
 <div class="ttc" id="aa00110_html"><div class="ttname"><a href="a00110.html">StringState.h</a></div></div>
+<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">IDState.h</a></div></div>
+<div class="ttc" id="aa00104_html"><div class="ttname"><a href="a00104.html">State.h</a></div></div>
 <div class="ttc" id="aa00274_html_a79b7200b3f0fe58bcfea3e21980ce0bf"><div class="ttname"><a href="a00274.html#a79b7200b3f0fe58bcfea3e21980ce0bf">Transition::GetState</a></div><div class="ttdeci">State * GetState(State *const &amp;currentState, char symbol)</div><div class="ttdef"><b>Definition:</b> Transition.cpp:7</div></div>
-<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">IDState.h</a></div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">State.h</a></div></div>
-<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">SeparatorState.h</a></div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">SeparatorState.h</a></div></div>
+<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">NumState.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

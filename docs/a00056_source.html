@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('a00056_source.html',''); initResizable
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00218.html">ParserError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> &amp;expectedSymbol, <a class="code" href="a00266.html">Token</a>* <span class="keyword">const</span> &amp;token, <a class="code" href="a00230.html">TokenLocation</a> lastSymbolLocation = {}) : <a class="code" href="a00206.html">BaseError</a>(std::string(1, expectedSymbol), token) {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span> (token == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            _error = std::string(<span class="stringliteral">&quot;Expected &quot;</span>) + expectedSymbol + <span class="stringliteral">&quot;, found end of file&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            _error = std::string(<span class="stringliteral">&quot;ParserError:\n\tExpected &quot;</span>) + expectedSymbol + <span class="stringliteral">&quot;, found end of file&quot;</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            _location = lastSymbolLocation;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">else</span></div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('a00056_source.html',''); initResizable
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a00218.html">ParserError</a>(<span class="keyword">const</span> std::string &amp;expectedExpression, <a class="code" href="a00266.html">Token</a>* <span class="keyword">const</span> &amp;token, <a class="code" href="a00230.html">TokenLocation</a> lastSymbolLocation = {}) : <a class="code" href="a00206.html">BaseError</a>(expectedExpression, token) {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (token == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            _error = std::string(<span class="stringliteral">&quot;Expected &quot;</span>) + expectedExpression + <span class="stringliteral">&quot;, found end of file&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            _error = std::string(<span class="stringliteral">&quot;ParserError:\n\tExpected &quot;</span>) + expectedExpression + <span class="stringliteral">&quot;, found end of file&quot;</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            _location = lastSymbolLocation;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">else</span></div>
@@ -130,14 +130,14 @@ $(document).ready(function(){initNavTree('a00056_source.html',''); initResizable
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_PARSERERROR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00230_html"><div class="ttname"><a href="a00230.html">TokenLocation</a></div><div class="ttdoc">позиция токена</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:40</div></div>
+<div class="ttc" id="aa00230_html"><div class="ttname"><a href="a00230.html">TokenLocation</a></div><div class="ttdoc">Позиция токена</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:40</div></div>
 <div class="ttc" id="aa00226_html_a89319d9fd3d794edcd19f14de0127d68"><div class="ttname"><a href="a00226.html#a89319d9fd3d794edcd19f14de0127d68">TokenLinePosition::line</a></div><div class="ttdeci">unsigned int line</div><div class="ttdoc">строка</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:8</div></div>
 <div class="ttc" id="aa00230_html_a16e66c269c4c067c69a0adc48f79fae3"><div class="ttname"><a href="a00230.html#a16e66c269c4c067c69a0adc48f79fae3">TokenLocation::start</a></div><div class="ttdeci">TokenLinePosition start</div><div class="ttdoc">позиция первого символа</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:41</div></div>
-<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
+<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">Класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
 <div class="ttc" id="aa00230_html_a0c9cb7c20c490decf46781b64a3a0431"><div class="ttname"><a href="a00230.html#a0c9cb7c20c490decf46781b64a3a0431">TokenLocation::end</a></div><div class="ttdeci">TokenLinePosition end</div><div class="ttdoc">позиция последнего символа</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:42</div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">ParserError</a></div><div class="ttdoc">ошибка на этапе синтаксического анализа</div><div class="ttdef"><b>Definition:</b> ParserError.h:9</div></div>
+<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">ParserError</a></div><div class="ttdoc">Ошибка на этапе синтаксического анализа</div><div class="ttdef"><b>Definition:</b> ParserError.h:9</div></div>
 <div class="ttc" id="aa00266_html_acdd79b84f4ec33cd59a891d0c70b02ba"><div class="ttname"><a href="a00266.html#acdd79b84f4ec33cd59a891d0c70b02ba">Token::GetLocation</a></div><div class="ttdeci">TokenLocation *const  &amp; GetLocation() const</div><div class="ttdef"><b>Definition:</b> Token.cpp:34</div></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:12</div></div>
+<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">Базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:12</div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">BaseError.h</a></div></div>
 <div class="ttc" id="aa00226_html_afc896cdb163922d36bd68abbf8493bcc"><div class="ttname"><a href="a00226.html#afc896cdb163922d36bd68abbf8493bcc">TokenLinePosition::column</a></div><div class="ttdeci">unsigned int column</div><div class="ttdoc">столбец</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:9</div></div>
 <!-- start footer part -->

@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="a00226.html#a68a1c2e1f574546c9b4604340587e482">TokenLinePosition</a>
 </li>
 <li>Analyze()
-: <a class="el" href="a00242.html#ae6d8db707fcca0147bc806253e6037c8">Lexer</a>
+: <a class="el" href="a00234.html#ae6d8db707fcca0147bc806253e6037c8">Lexer</a>
 , <a class="el" href="a00290.html#abee3a0182d65880c02e09b9fa33e51d0">Parser</a>
 , <a class="el" href="a00298.html#a29ccf0822e47cc94a09d0ae13a899682">SemanticAnalyzer</a>
 </li>
@@ -110,11 +110,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>CanTransitTo()
-: <a class="el" href="a00234.html#a7bf7152c8a440c7d7d6068e58f77a5b8">IDState</a>
-, <a class="el" href="a00238.html#a71358e1fb822bbc5439e2f8fd9343682">IgnoreState</a>
-, <a class="el" href="a00246.html#a33b7b8c6d4617fb6e765c2d5fd80035d">NumState</a>
-, <a class="el" href="a00250.html#ac4a56e4a26e593e9267b1641be12eef2">SeparatorState</a>
-, <a class="el" href="a00254.html#a09e828599a331b3ab9abf470da8d2b15">State</a>
+: <a class="el" href="a00242.html#a7bf7152c8a440c7d7d6068e58f77a5b8">IDState</a>
+, <a class="el" href="a00246.html#a71358e1fb822bbc5439e2f8fd9343682">IgnoreState</a>
+, <a class="el" href="a00250.html#a33b7b8c6d4617fb6e765c2d5fd80035d">NumState</a>
+, <a class="el" href="a00254.html#ac4a56e4a26e593e9267b1641be12eef2">SeparatorState</a>
+, <a class="el" href="a00258.html#a09e828599a331b3ab9abf470da8d2b15">State</a>
 , <a class="el" href="a00262.html#aa0a93f289f5253fa54a72aa4cc69bee4">StringState</a>
 </li>
 <li>CodeGenerator()
@@ -124,11 +124,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="a00226.html#afc896cdb163922d36bd68abbf8493bcc">TokenLinePosition</a>
 </li>
 <li>Contains()
-: <a class="el" href="a00234.html#ab0d24221f4fd598a20186672a2d785d4">IDState</a>
-, <a class="el" href="a00238.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">IgnoreState</a>
-, <a class="el" href="a00246.html#a57548b0dada89db9ff8d950b59fca57d">NumState</a>
-, <a class="el" href="a00250.html#a6067758dc4e35562cfd702f604c8a744">SeparatorState</a>
-, <a class="el" href="a00254.html#ac7edb72fc5c3bf6e0d6905440e339b81">State</a>
+: <a class="el" href="a00242.html#ab0d24221f4fd598a20186672a2d785d4">IDState</a>
+, <a class="el" href="a00246.html#a0c34a1bed7c4e24bb6730b9b6b3e1e56">IgnoreState</a>
+, <a class="el" href="a00250.html#a57548b0dada89db9ff8d950b59fca57d">NumState</a>
+, <a class="el" href="a00254.html#a6067758dc4e35562cfd702f604c8a744">SeparatorState</a>
+, <a class="el" href="a00258.html#ac7edb72fc5c3bf6e0d6905440e339b81">State</a>
 , <a class="el" href="a00262.html#acc002cdd22d6c5c62724b5200398f7a9">StringState</a>
 </li>
 <li>CreateAsmFile()
@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="a00182.html#a5e6992f09ae9391e350141b4ff503246">CodeGenerator</a>
 </li>
 <li>GenerateToken()
-: <a class="el" href="a00258.html#aaa17584c4ff941f01b1ed757d206e288">StateMachine</a>
+: <a class="el" href="a00238.html#aaa17584c4ff941f01b1ed757d206e288">StateMachine</a>
 </li>
 <li>GetASTTree()
 : <a class="el" href="a00290.html#a0b60c11a2eccaf543d351f1fa43649d3">Parser</a>
@@ -180,18 +180,18 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="a00274.html#a79b7200b3f0fe58bcfea3e21980ce0bf">Transition</a>
 </li>
 <li>GetToken()
-: <a class="el" href="a00234.html#a3ef525aaa8f747b45e353dc878262424">IDState</a>
-, <a class="el" href="a00238.html#a2c20107c7b28912d2f725ba2cf1f5d74">IgnoreState</a>
-, <a class="el" href="a00246.html#a693271414f418deca3b0529f72077f9b">NumState</a>
-, <a class="el" href="a00250.html#afc3fdde321980a786b1252f64fb94310">SeparatorState</a>
-, <a class="el" href="a00254.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">State</a>
+: <a class="el" href="a00242.html#a3ef525aaa8f747b45e353dc878262424">IDState</a>
+, <a class="el" href="a00246.html#a2c20107c7b28912d2f725ba2cf1f5d74">IgnoreState</a>
+, <a class="el" href="a00250.html#a693271414f418deca3b0529f72077f9b">NumState</a>
+, <a class="el" href="a00254.html#afc3fdde321980a786b1252f64fb94310">SeparatorState</a>
+, <a class="el" href="a00258.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">State</a>
 , <a class="el" href="a00262.html#a2bdd5143bb8f16f5d7a25b9df33f921c">StringState</a>
 </li>
 <li>GetTokenLocation()
 : <a class="el" href="a00206.html#ac6e4e53381f7f8775e43f5dc3f3655e6">BaseError</a>
 </li>
 <li>GetTokens()
-: <a class="el" href="a00242.html#ab50360bf0f8869f85a563b0ec7a00d82">Lexer</a>
+: <a class="el" href="a00234.html#ab50360bf0f8869f85a563b0ec7a00d82">Lexer</a>
 </li>
 </ul>
 
@@ -251,7 +251,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="a00266.html#a6541dabdee986a9208793b0cf1b8e5ed">Token</a>
 </li>
 <li>SplitTokens()
-: <a class="el" href="a00250.html#adc81e5036cb8868fdbca1d9d9e9b2140">SeparatorState</a>
+: <a class="el" href="a00254.html#adc81e5036cb8868fdbca1d9d9e9b2140">SeparatorState</a>
 </li>
 <li>start
 : <a class="el" href="a00230.html#a16e66c269c4c067c69a0adc48f79fae3">TokenLocation</a>
@@ -261,7 +261,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>TakeSymbol()
-: <a class="el" href="a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58">StateMachine</a>
+: <a class="el" href="a00238.html#a0cf70c038fe9dbf0a0a2eae541678c58">StateMachine</a>
 </li>
 <li>ToString()
 : <a class="el" href="a00326.html#a57474728b78fa73590c42b038e42d7c2">TypeData</a>

@@ -16,7 +16,6 @@ var a00119 =
       [ "BOOL", "a00119.html#aa520fbf142ba1e7e659590c07da31921aa97b2c144243b2b9d2c593ec268b62f5", null ],
       [ "LET", "a00119.html#aa520fbf142ba1e7e659590c07da31921ada02466f9a4224e477bd63afbcf573c5", null ],
       [ "MUT", "a00119.html#aa520fbf142ba1e7e659590c07da31921a35b1ee9c2b9c65dbdb8d85866a6c309b", null ],
-      [ "FOR", "a00119.html#aa520fbf142ba1e7e659590c07da31921a7885ad399f9cab93cb42befbe402c588", null ],
       [ "IF", "a00119.html#aa520fbf142ba1e7e659590c07da31921ade6ee2b5d856295add4d5e3631fbfb93", null ],
       [ "LOOP", "a00119.html#aa520fbf142ba1e7e659590c07da31921a9159b3578e4e1eb31ffdf90acd6f6e40", null ],
       [ "WHILE", "a00119.html#aa520fbf142ba1e7e659590c07da31921ac0ca84371abbc18f52fd48e32195cd15", null ],

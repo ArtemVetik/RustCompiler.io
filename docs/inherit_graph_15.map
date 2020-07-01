@@ -1,8 +1,8 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$a00254.html" title="базовый класс для всех состояний" alt="" coords="5,107,59,133"/>
-<area shape="rect" id="node2" href="$a00234.html" title="состояние идентификатора" alt="" coords="129,5,194,32"/>
-<area shape="rect" id="node3" href="$a00238.html" title="состояние игнорируемых символов" alt="" coords="117,56,205,83"/>
-<area shape="rect" id="node4" href="$a00246.html" title="состояние числа" alt="" coords="121,107,201,133"/>
-<area shape="rect" id="node5" href="$a00250.html" title="состояние разделителей" alt="" coords="107,157,216,184"/>
-<area shape="rect" id="node6" href="$a00262.html" title="состояние строки" alt="" coords="118,208,205,235"/>
+<area shape="rect" id="node1" href="$a00258.html" title="Базовый класс для всех состояний" alt="" coords="5,107,59,133"/>
+<area shape="rect" id="node2" href="$a00242.html" title="Состояние идентификатора" alt="" coords="129,5,194,32"/>
+<area shape="rect" id="node3" href="$a00246.html" title="Состояние игнорируемых символов" alt="" coords="117,56,205,83"/>
+<area shape="rect" id="node4" href="$a00250.html" title="Состояние числа" alt="" coords="121,107,201,133"/>
+<area shape="rect" id="node5" href="$a00254.html" title="Состояние разделителей" alt="" coords="107,157,216,184"/>
+<area shape="rect" id="node6" href="$a00262.html" title="Состояние строки" alt="" coords="118,208,205,235"/>
 </map>

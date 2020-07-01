@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -85,18 +85,17 @@ $(document).ready(function(){initNavTree('a00258.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">StateMachine Cписок членов класса</div>  </div>
+<div class="title">State Cписок членов класса</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="a00258.html">StateMachine</a>, включая наследуемые из базового класса</p>
+<p>Полный список членов класса <a class="el" href="a00258.html">State</a>, включая наследуемые из базового класса</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00258.html#aaa17584c4ff941f01b1ed757d206e288">GenerateToken</a>()</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>GetTokens</b>() const (определено в <a class="el" href="a00258.html">StateMachine</a>)</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PrintTokens</b>() const (определено в <a class="el" href="a00258.html">StateMachine</a>)</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>StateMachine</b>() (определено в <a class="el" href="a00258.html">StateMachine</a>)</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58">TakeSymbol</a>(char symbol)</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~StateMachine</b>() (определено в <a class="el" href="a00258.html">StateMachine</a>)</td><td class="entry"><a class="el" href="a00258.html">StateMachine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00258.html#a09e828599a331b3ab9abf470da8d2b15">CanTransitTo</a>(char sym)=0</td><td class="entry"><a class="el" href="a00258.html">State</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00258.html#a73fd3e480b668342bf9fc5cbe3994708">CanTransitTo</a>(State *const &amp;to) const</td><td class="entry"><a class="el" href="a00258.html">State</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00258.html#ac7edb72fc5c3bf6e0d6905440e339b81">Contains</a>(char sym)=0</td><td class="entry"><a class="el" href="a00258.html">State</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00258.html#aa9f74b4fd185ec2ee9a1c6b509fe92dd">GetToken</a>(const std::string &amp;value)=0</td><td class="entry"><a class="el" href="a00258.html">State</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~State</b>()=0 (определено в <a class="el" href="a00258.html">State</a>)</td><td class="entry"><a class="el" href="a00258.html">State</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

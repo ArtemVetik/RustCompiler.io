@@ -1,5 +1,5 @@
 <map id="CodeGeneratorError" name="CodeGeneratorError">
-<area shape="rect" id="node1" title="ошибка на этапе генерации кода" alt="" coords="5,155,143,181"/>
-<area shape="rect" id="node2" href="$a00206.html" title="базовый класс ошибок компилятора" alt="" coords="34,80,114,107"/>
+<area shape="rect" id="node1" title="Ошибка на этапе генерации кода" alt="" coords="5,155,143,181"/>
+<area shape="rect" id="node2" href="$a00206.html" title="Базовый класс ошибок компилятора" alt="" coords="34,80,114,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="22,5,126,32"/>
 </map>

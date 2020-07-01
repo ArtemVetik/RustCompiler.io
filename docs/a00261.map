@@ -1,4 +1,4 @@
 <map id="StringState" name="StringState">
-<area shape="rect" id="node1" title="состояние строки" alt="" coords="5,80,92,107"/>
-<area shape="rect" id="node2" href="$a00254.html" title="базовый класс для всех состояний" alt="" coords="22,5,75,32"/>
+<area shape="rect" id="node1" title="Состояние строки" alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node2" href="$a00258.html" title="Базовый класс для всех состояний" alt="" coords="22,5,75,32"/>
 </map>

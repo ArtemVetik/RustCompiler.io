@@ -57,7 +57,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00041.html",
-"a00258.html#a0cf70c038fe9dbf0a0a2eae541678c58"
+"a00258.html#a5accc97fb392b9b8c937ca1249553f80"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

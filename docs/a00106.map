@@ -1,4 +1,11 @@
-<map id="D:/CLionProgects/RustCompiler/Lexer/StateMachine.h" name="D:/CLionProgects/RustCompiler/Lexer/StateMachine.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$a00080.html" title=" " alt="" coords="5,95,212,136"/>
+<map id="D:/CLionProgects/RustCompiler/Lexer/States/State.h" name="D:/CLionProgects/RustCompiler/Lexer/States/State.h">
+<area shape="rect" id="node1" title=" " alt="" coords="283,5,490,47"/>
+<area shape="rect" id="node2" href="$a00074.html" title=" " alt="" coords="71,273,278,315"/>
+<area shape="rect" id="node4" href="$a00125.html" title=" " alt="" coords="283,184,490,225"/>
+<area shape="rect" id="node5" href="$a00080.html" title=" " alt="" coords="53,95,259,136"/>
+<area shape="rect" id="node6" href="$a00092.html" title=" " alt="" coords="283,95,490,136"/>
+<area shape="rect" id="node7" href="$a00086.html" title=" " alt="" coords="514,95,721,136"/>
+<area shape="rect" id="node8" href="$a00110.html" title=" " alt="" coords="745,95,951,136"/>
+<area shape="rect" id="node9" href="$a00098.html" title=" " alt="" coords="975,95,1182,136"/>
+<area shape="rect" id="node3" href="$a00068.html" title=" " alt="" coords="71,363,278,404"/>
 </map>

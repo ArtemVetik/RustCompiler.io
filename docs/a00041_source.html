@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -108,17 +108,17 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00182.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00182.html">CodeGenerator</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        uint32_t uu;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">float</span> d;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        uint32_t uint32;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">float</span> f32;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    } Converter32{};</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        uint64_t uu;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> d;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        uint64_t uint64;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> f64;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    } Converter64{};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">enum</span> RulesForLabels {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        While = 0, Loop, If, Else, Block</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        While = 0, Loop, If, Else, Block,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">enum</span> CompareType {</div>
@@ -217,18 +217,18 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MasmTypeData.h</a></div></div>
-<div class="ttc" id="aa00286_html"><div class="ttname"><a href="a00286.html">Node</a></div><div class="ttdoc">вершина дерева</div><div class="ttdef"><b>Definition:</b> Node.h:31</div></div>
-<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a></div><div class="ttdeci">MASMType</div><div class="ttdoc">тип в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:10</div></div>
+<div class="ttc" id="aa00286_html"><div class="ttname"><a href="a00286.html">Node</a></div><div class="ttdoc">Вершина дерева</div><div class="ttdef"><b>Definition:</b> Node.h:31</div></div>
+<div class="ttc" id="aa00044_html_a196ce0d05cdb3e0a6b40b2a106f6fde2"><div class="ttname"><a href="a00044.html#a196ce0d05cdb3e0a6b40b2a106f6fde2">MASMType</a></div><div class="ttdeci">MASMType</div><div class="ttdoc">Тип в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:10</div></div>
 <div class="ttc" id="aa00202_html"><div class="ttname"><a href="a00202.html">MasmArray_Data</a></div><div class="ttdoc">описывает массив в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:43</div></div>
 <div class="ttc" id="aa00182_html_ab367c2e441a3dbbdd13d19188b192c7f"><div class="ttname"><a href="a00182.html#ab367c2e441a3dbbdd13d19188b192c7f">CodeGenerator::CodeGenerator</a></div><div class="ttdeci">CodeGenerator(const AST_Tree &amp;tree, const Table&lt; Function_Data &gt; &amp;funcTable)</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:3</div></div>
-<div class="ttc" id="aa00182_html_a5e6992f09ae9391e350141b4ff503246"><div class="ttname"><a href="a00182.html#a5e6992f09ae9391e350141b4ff503246">CodeGenerator::Generate</a></div><div class="ttdeci">void Generate()</div><div class="ttdoc">запуск генерации кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:79</div></div>
-<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">тип переменной на входном языке</div><div class="ttdef"><b>Definition:</b> TypeData.h:9</div></div>
-<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">CodeGenerator</a></div><div class="ttdoc">класс генерации ассемблерного кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.h:20</div></div>
+<div class="ttc" id="aa00182_html_a5e6992f09ae9391e350141b4ff503246"><div class="ttname"><a href="a00182.html#a5e6992f09ae9391e350141b4ff503246">CodeGenerator::Generate</a></div><div class="ttdeci">void Generate()</div><div class="ttdoc">Запуск генерации кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:79</div></div>
+<div class="ttc" id="aa00173_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="a00173.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Тип переменной на входном языке</div><div class="ttdef"><b>Definition:</b> TypeData.h:9</div></div>
+<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">CodeGenerator</a></div><div class="ttdoc">Класс генерации ассемблерного кода</div><div class="ttdef"><b>Definition:</b> CodeGenerator.h:20</div></div>
 <div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">Table&lt; Function_Data &gt;</a></div></div>
-<div class="ttc" id="aa00182_html_aabff1a74359717ed0619a37d86b3f34d"><div class="ttname"><a href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CodeGenerator::CreateAsmFile</a></div><div class="ttdeci">void CreateAsmFile()</div><div class="ttdoc">создание ассемблерного файла</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:1344</div></div>
-<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdoc">тип покена</div><div class="ttdef"><b>Definition:</b> TokenType.h:8</div></div>
+<div class="ttc" id="aa00182_html_aabff1a74359717ed0619a37d86b3f34d"><div class="ttname"><a href="a00182.html#aabff1a74359717ed0619a37d86b3f34d">CodeGenerator::CreateAsmFile</a></div><div class="ttdeci">void CreateAsmFile()</div><div class="ttdoc">Создание ассемблерного файла</div><div class="ttdef"><b>Definition:</b> CodeGenerator.cpp:1355</div></div>
+<div class="ttc" id="aa00119_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="a00119.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdoc">Тип покена</div><div class="ttdef"><b>Definition:</b> TokenType.h:8</div></div>
 <div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MasmID_Data</a></div><div class="ttdoc">описывает переменную в макро ассемблере</div><div class="ttdef"><b>Definition:</b> MasmTypeData.h:17</div></div>
-<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:11</div></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">AST_Tree</a></div><div class="ttdoc">Абстрактное синтаксическое дерево</div><div class="ttdef"><b>Definition:</b> AST_Tree.h:11</div></div>
 <div class="ttc" id="aa00294_html"><div class="ttname"><a href="a00294.html">ProgramBlock&lt; MasmID_Data, MasmArray_Data &gt;</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

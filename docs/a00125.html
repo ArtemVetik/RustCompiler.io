@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -90,12 +90,12 @@ $(document).ready(function(){initNavTree('a00125.html',''); initResizable(); });
 <div class="title">Файл Transition.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00098_source.html">State.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00068_source.html">IDState.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00086_source.html">NumState.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00074_source.html">IgnoreState.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00110_source.html">StringState.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00092_source.html">SeparatorState.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00104_source.html">States/State.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00080_source.html">States/IDState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00092_source.html">States/NumState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00086_source.html">States/IgnoreState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00110_source.html">States/StringState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00098_source.html">States/SeparatorState.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00053_source.html">../Exceptions/LexError.h</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -104,23 +104,23 @@ $(document).ready(function(){initNavTree('a00125.html',''); initResizable(); });
 <div class="dyncontent">
 <div class="center"><img src="a00126.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8h" alt=""/></div>
 <map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8h" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8h">
-<area shape="rect" title=" " alt="" coords="471,5,677,47"/>
-<area shape="rect" href="a00098.html" title=" " alt="" coords="625,169,689,196"/>
-<area shape="rect" title=" " alt="" coords="647,393,701,420"/>
-<area shape="rect" href="a00068.html" title=" " alt="" coords="316,95,392,121"/>
-<area shape="rect" title=" " alt="" coords="326,169,382,196"/>
-<area shape="rect" href="a00086.html" title=" " alt="" coords="611,95,702,121"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="849,95,947,121"/>
-<area shape="rect" href="a00110.html" title=" " alt="" coords="726,95,825,121"/>
-<area shape="rect" href="a00092.html" title=" " alt="" coords="417,95,537,121"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="71,95,234,121"/>
-<area shape="rect" title=" " alt="" coords="754,319,826,345"/>
-<area shape="rect" title=" " alt="" coords="701,244,775,271"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="583,319,679,345"/>
-<area shape="rect" href="a00116.html" title=" " alt="" coords="499,244,567,271"/>
-<area shape="rect" title=" " alt="" coords="506,319,559,345"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="211,319,431,345"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="95,169,186,196"/>
+<area shape="rect" title=" " alt="" coords="503,5,709,47"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="657,169,763,196"/>
+<area shape="rect" title=" " alt="" coords="707,393,761,420"/>
+<area shape="rect" href="a00080.html" title=" " alt="" coords="263,95,381,121"/>
+<area shape="rect" title=" " alt="" coords="294,169,350,196"/>
+<area shape="rect" href="a00092.html" title=" " alt="" coords="643,95,777,121"/>
+<area shape="rect" href="a00086.html" title=" " alt="" coords="966,95,1107,121"/>
+<area shape="rect" href="a00110.html" title=" " alt="" coords="801,95,941,121"/>
+<area shape="rect" href="a00098.html" title=" " alt="" coords="406,95,569,121"/>
+<area shape="rect" href="a00053.html" title=" " alt="" coords="25,95,187,121"/>
+<area shape="rect" title=" " alt="" coords="823,319,895,345"/>
+<area shape="rect" title=" " alt="" coords="773,244,847,271"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="635,319,743,345"/>
+<area shape="rect" href="a00116.html" title=" " alt="" coords="543,244,623,271"/>
+<area shape="rect" title=" " alt="" coords="557,319,610,345"/>
+<area shape="rect" href="a00062.html" title=" " alt="" coords="261,319,481,345"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="77,169,167,196"/>
 <area shape="rect" title=" " alt="" coords="5,244,84,271"/>
 </map>
 </div>
@@ -130,8 +130,8 @@ $(document).ready(function(){initNavTree('a00125.html',''); initResizable(); });
 <div class="center"><img src="a00127.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8hdep" alt=""/></div>
 <map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8hdep" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_transition_8hdep">
 <area shape="rect" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" href="a00104.html" title=" " alt="" coords="5,95,212,136"/>
-<area shape="rect" href="a00080.html" title=" " alt="" coords="5,184,212,225"/>
+<area shape="rect" href="a00074.html" title=" " alt="" coords="5,95,212,136"/>
+<area shape="rect" href="a00068.html" title=" " alt="" coords="5,184,212,225"/>
 </map>
 </div>
 </div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('a00125.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00274.html">Transition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">класс, осузествляющий переходы между состояниями  <a href="a00274.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, осузествляющий переходы между состояниями  <a href="a00274.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

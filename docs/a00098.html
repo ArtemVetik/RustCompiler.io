@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rust Compiler: Файл D:/CLionProgects/RustCompiler/Lexer/State.h</title>
+<title>Rust Compiler: Файл D:/CLionProgects/RustCompiler/Lexer/States/SeparatorState.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -87,43 +87,37 @@ $(document).ready(function(){initNavTree('a00098.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Классы</a>  </div>
   <div class="headertitle">
-<div class="title">Файл State.h</div>  </div>
+<div class="title">Файл SeparatorState.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00119_source.html">TokenType.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00116_source.html">Token.h</a>&quot;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00104_source.html">State.h</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Граф включаемых заголовочных файлов для State.h:</div>
+Граф включаемых заголовочных файлов для SeparatorState.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00099.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8h" alt=""/></div>
-<map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8h" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8h">
-<area shape="rect" title=" " alt="" coords="54,5,260,47"/>
-<area shape="rect" title=" " alt="" coords="28,169,100,196"/>
-<area shape="rect" title=" " alt="" coords="288,95,362,121"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="124,169,220,196"/>
-<area shape="rect" title=" " alt="" coords="144,244,199,271"/>
-<area shape="rect" href="a00116.html" title=" " alt="" coords="195,95,263,121"/>
-<area shape="rect" title=" " alt="" coords="294,169,348,196"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="372,169,592,196"/>
+<div class="center"><img src="a00099.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8h" alt=""/></div>
+<map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8h" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8h">
+<area shape="rect" title=" " alt="" coords="100,5,307,47"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="130,95,194,121"/>
+<area shape="rect" title=" " alt="" coords="218,95,274,121"/>
+<area shape="rect" title=" " alt="" coords="28,244,100,271"/>
+<area shape="rect" title=" " alt="" coords="304,169,378,196"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="124,244,232,271"/>
+<area shape="rect" title=" " alt="" coords="151,319,206,345"/>
+<area shape="rect" href="a00116.html" title=" " alt="" coords="200,169,280,196"/>
+<area shape="rect" title=" " alt="" coords="308,244,361,271"/>
+<area shape="rect" href="a00062.html" title=" " alt="" coords="386,244,606,271"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Граф файлов, в которые включается этот файл:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00100.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8hdep" alt=""/></div>
-<map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8hdep" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_state_8hdep">
-<area shape="rect" title=" " alt="" coords="519,5,725,47"/>
-<area shape="rect" href="a00068.html" title=" " alt="" coords="5,95,212,136"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="519,184,725,225"/>
-<area shape="rect" href="a00104.html" title=" " alt="" coords="820,273,1027,315"/>
-<area shape="rect" href="a00086.html" title=" " alt="" coords="288,95,495,136"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="519,95,725,136"/>
-<area shape="rect" href="a00110.html" title=" " alt="" coords="749,95,956,136"/>
-<area shape="rect" href="a00092.html" title=" " alt="" coords="980,95,1187,136"/>
-<area shape="rect" href="a00080.html" title=" " alt="" coords="820,363,1027,404"/>
+<div class="center"><img src="a00100.png" border="0" usemap="#_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8hdep" alt=""/></div>
+<map name="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8hdep" id="_d_1_2_c_lion_progects_2_rust_compiler_2_lexer_2_states_2_separator_state_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" href="a00125.html" title=" " alt="" coords="5,95,212,136"/>
+<area shape="rect" href="a00074.html" title=" " alt="" coords="5,184,212,225"/>
+<area shape="rect" href="a00068.html" title=" " alt="" coords="5,273,212,315"/>
 </map>
 </div>
 </div>
@@ -131,8 +125,8 @@ $(document).ready(function(){initNavTree('a00098.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Классы</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html">State</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">базовый класс для всех состояний  <a href="a00254.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html">SeparatorState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние разделителей  <a href="a00254.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -140,7 +134,7 @@ $(document).ready(function(){initNavTree('a00098.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00098.html">State.h</a></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="dir_179b45200a7866988540d9d0baf7bef6.html">States</a></li><li class="navelem"><a class="el" href="a00098.html">SeparatorState.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

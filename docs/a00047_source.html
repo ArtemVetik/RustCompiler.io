@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('a00047_source.html',''); initResizable
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Lexer/Token.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00206.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00206.html">BaseError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00206.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00206.html">BaseError</a> : <span class="keyword">public</span> std::exception{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string _error;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="a00230.html">TokenLocation</a> _location;</div>
@@ -129,12 +129,12 @@ $(document).ready(function(){initNavTree('a00047_source.html',''); initResizable
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_BASEERROR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00230_html"><div class="ttname"><a href="a00230.html">TokenLocation</a></div><div class="ttdoc">позиция токена</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:40</div></div>
-<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
+<div class="ttc" id="aa00230_html"><div class="ttname"><a href="a00230.html">TokenLocation</a></div><div class="ttdoc">Позиция токена</div><div class="ttdef"><b>Definition:</b> TokenLinePosition.h:40</div></div>
+<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">Класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
 <div class="ttc" id="aa00266_html_acdd79b84f4ec33cd59a891d0c70b02ba"><div class="ttname"><a href="a00266.html#acdd79b84f4ec33cd59a891d0c70b02ba">Token::GetLocation</a></div><div class="ttdeci">TokenLocation *const  &amp; GetLocation() const</div><div class="ttdef"><b>Definition:</b> Token.cpp:34</div></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:12</div></div>
+<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">BaseError</a></div><div class="ttdoc">Базовый класс ошибок компилятора</div><div class="ttdef"><b>Definition:</b> BaseError.h:12</div></div>
 <div class="ttc" id="aa00062_html"><div class="ttname"><a href="a00062.html">TokenLinePosition.h</a></div></div>
-<div class="ttc" id="aa00206_html_ac6e4e53381f7f8775e43f5dc3f3655e6"><div class="ttname"><a href="a00206.html#ac6e4e53381f7f8775e43f5dc3f3655e6">BaseError::GetTokenLocation</a></div><div class="ttdeci">const TokenLocation &amp; GetTokenLocation() const</div><div class="ttdoc">возвращает позицию токена</div><div class="ttdef"><b>Definition:</b> BaseError.h:32</div></div>
+<div class="ttc" id="aa00206_html_ac6e4e53381f7f8775e43f5dc3f3655e6"><div class="ttname"><a href="a00206.html#ac6e4e53381f7f8775e43f5dc3f3655e6">BaseError::GetTokenLocation</a></div><div class="ttdeci">const TokenLocation &amp; GetTokenLocation() const</div><div class="ttdoc">Возвращает позицию токена</div><div class="ttdef"><b>Definition:</b> BaseError.h:32</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

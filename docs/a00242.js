@@ -1,6 +1,9 @@
 var a00242 =
 [
-    [ "Lexer", "a00242.html#a5aa7c479b6f27a3049839bd7adeb27ad", null ],
-    [ "Analyze", "a00242.html#ae6d8db707fcca0147bc806253e6037c8", null ],
-    [ "GetTokens", "a00242.html#ab50360bf0f8869f85a563b0ec7a00d82", null ]
+    [ "IDState", "a00242.html#acda756aa29e0c33a8b61441ea86c4c7b", null ],
+    [ "~IDState", "a00242.html#a9ad7fe5406c9a6d67ea59a0c706bbd02", null ],
+    [ "CanTransitTo", "a00242.html#a7bf7152c8a440c7d7d6068e58f77a5b8", null ],
+    [ "CanTransitTo", "a00242.html#a856dbda131950e5536b58327eaa850db", null ],
+    [ "Contains", "a00242.html#ab0d24221f4fd598a20186672a2d785d4", null ],
+    [ "GetToken", "a00242.html#a3ef525aaa8f747b45e353dc878262424", null ]
 ];

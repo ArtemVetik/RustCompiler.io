@@ -1,8 +1,8 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
 <area shape="rect" id="node1" title=" " alt="" coords="5,81,84,108"/>
-<area shape="rect" id="node2" href="$a00206.html" title="базовый класс ошибок компилятора" alt="" coords="132,81,212,108"/>
-<area shape="rect" id="node3" href="$a00210.html" title="ошибка на этапе генерации кода" alt="" coords="260,5,397,32"/>
-<area shape="rect" id="node4" href="$a00214.html" title="ошибка на этапе лексического анализа" alt="" coords="293,56,364,83"/>
-<area shape="rect" id="node5" href="$a00218.html" title="ошибка на этапе синтаксического анализа" alt="" coords="285,107,373,133"/>
-<area shape="rect" id="node6" href="$a00222.html" title="ошибка на этапе семантического анализа" alt="" coords="276,157,381,184"/>
+<area shape="rect" id="node2" href="$a00206.html" title="Базовый класс ошибок компилятора" alt="" coords="132,81,212,108"/>
+<area shape="rect" id="node3" href="$a00210.html" title="Ошибка на этапе генерации кода" alt="" coords="260,5,397,32"/>
+<area shape="rect" id="node4" href="$a00214.html" title="Ошибка на этапе лексического анализа" alt="" coords="293,56,364,83"/>
+<area shape="rect" id="node5" href="$a00218.html" title="Ошибка на этапе синтаксического анализа" alt="" coords="285,107,373,133"/>
+<area shape="rect" id="node6" href="$a00222.html" title="Ошибка на этапе семантического анализа" alt="" coords="276,157,381,184"/>
 </map>

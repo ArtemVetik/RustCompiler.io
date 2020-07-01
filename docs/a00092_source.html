@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rust Compiler: Исходный файл D:/CLionProgects/RustCompiler/Lexer/SeparatorState.h</title>
+<title>Rust Compiler: Исходный файл D:/CLionProgects/RustCompiler/Lexer/States/NumState.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
    <div id="projectname">Rust Compiler
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Простой транслятор с языка Rust на MASM</div>
+   <div id="projectbrief">Простой компилятор с языка Rust на MASM</div>
   </td>
  </tr>
  </tbody>
@@ -85,54 +85,37 @@ $(document).ready(function(){initNavTree('a00092_source.html',''); initResizable
 
 <div class="header">
   <div class="headertitle">
-<div class="title">SeparatorState.h</div>  </div>
+<div class="title">NumState.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00092.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_SEPARATORSTATE_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_SEPARATORSTATE_H</span></div>
+<a href="a00092.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RUSTCOMPILER_NUMSTATE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RUSTCOMPILER_NUMSTATE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00098.html">State.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00250.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00250.html">SeparatorState</a> : <span class="keyword">public</span> <a class="code" href="a00254.html">State</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">enum class</span> CommentType {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        SingleLine, Multiline, None</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00104.html">State.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="a00250.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00250.html">NumState</a> : <span class="keyword">public</span> <a class="code" href="a00258.html">State</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ~<a class="code" href="a00250.html">NumState</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00250.html#a57548b0dada89db9ff8d950b59fca57d">Contains</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00250.html#a33b7b8c6d4617fb6e765c2d5fd80035d">CanTransitTo</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00250.html#a693271414f418deca3b0529f72077f9b">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string _separators = <span class="stringliteral">&quot;+-*/%=&gt;&lt;{}[];(),.:!&amp;|&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::vector&lt;std::pair&lt;std::string, TokenType&gt;&gt; _tokenPair;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string _buffer;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    CommentType _comment;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> HasInTable(<span class="keyword">const</span> std::string &amp;value);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> Init();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="a00250.html">SeparatorState</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ~<a class="code" href="a00250.html">SeparatorState</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00250.html#a6067758dc4e35562cfd702f604c8a744">Contains</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00250.html#ac4a56e4a26e593e9267b1641be12eef2">CanTransitTo</a>(<span class="keywordtype">char</span> sym) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="a00266.html">Token</a>* <a class="code" href="a00250.html#afc3fdde321980a786b1252f64fb94310">GetToken</a>(<span class="keyword">const</span> std::string &amp;value) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;Token*&gt; <a class="code" href="a00250.html#adc81e5036cb8868fdbca1d9d9e9b2140">SplitTokens</a>(<span class="keyword">const</span> std::string &amp;value);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_SEPARATORSTATE_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif //RUSTCOMPILER_NUMSTATE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
-<div class="ttc" id="aa00250_html_adc81e5036cb8868fdbca1d9d9e9b2140"><div class="ttname"><a href="a00250.html#adc81e5036cb8868fdbca1d9d9e9b2140">SeparatorState::SplitTokens</a></div><div class="ttdeci">std::vector&lt; Token * &gt; SplitTokens(const std::string &amp;value)</div><div class="ttdoc">разделяет выражение на составные разделители</div><div class="ttdef"><b>Definition:</b> SeparatorState.cpp:58</div></div>
-<div class="ttc" id="aa00254_html"><div class="ttname"><a href="a00254.html">State</a></div><div class="ttdoc">базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
-<div class="ttc" id="aa00250_html_afc3fdde321980a786b1252f64fb94310"><div class="ttname"><a href="a00250.html#afc3fdde321980a786b1252f64fb94310">SeparatorState::GetToken</a></div><div class="ttdeci">Token * GetToken(const std::string &amp;value) override</div><div class="ttdoc">возвращает токен из текущего состояния</div><div class="ttdef"><b>Definition:</b> SeparatorState.cpp:37</div></div>
-<div class="ttc" id="aa00250_html_ac4a56e4a26e593e9267b1641be12eef2"><div class="ttname"><a href="a00250.html#ac4a56e4a26e593e9267b1641be12eef2">SeparatorState::CanTransitTo</a></div><div class="ttdeci">bool CanTransitTo(char sym) override</div><div class="ttdoc">проверяет возмжность перехода в текущее состояние по входящему символу</div><div class="ttdef"><b>Definition:</b> SeparatorState.cpp:103</div></div>
-<div class="ttc" id="aa00250_html_a6067758dc4e35562cfd702f604c8a744"><div class="ttname"><a href="a00250.html#a6067758dc4e35562cfd702f604c8a744">SeparatorState::Contains</a></div><div class="ttdeci">bool Contains(char sym) override</div><div class="ttdef"><b>Definition:</b> SeparatorState.cpp:87</div></div>
-<div class="ttc" id="aa00250_html"><div class="ttname"><a href="a00250.html">SeparatorState</a></div><div class="ttdoc">состояние разделителей</div><div class="ttdef"><b>Definition:</b> SeparatorState.h:12</div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">State.h</a></div></div>
+<div class="ttc" id="aa00258_html"><div class="ttname"><a href="a00258.html">State</a></div><div class="ttdoc">Базовый класс для всех состояний</div><div class="ttdef"><b>Definition:</b> State.h:13</div></div>
+<div class="ttc" id="aa00266_html"><div class="ttname"><a href="a00266.html">Token</a></div><div class="ttdoc">Класс, описывабщий токен</div><div class="ttdef"><b>Definition:</b> Token.h:13</div></div>
+<div class="ttc" id="aa00104_html"><div class="ttname"><a href="a00104.html">State.h</a></div></div>
+<div class="ttc" id="aa00250_html_a33b7b8c6d4617fb6e765c2d5fd80035d"><div class="ttname"><a href="a00250.html#a33b7b8c6d4617fb6e765c2d5fd80035d">NumState::CanTransitTo</a></div><div class="ttdeci">bool CanTransitTo(char sym) override</div><div class="ttdoc">Проверяет возмжность перехода в текущее состояние по входящему символу</div><div class="ttdef"><b>Definition:</b> NumState.cpp:7</div></div>
+<div class="ttc" id="aa00250_html"><div class="ttname"><a href="a00250.html">NumState</a></div><div class="ttdoc">Состояние числа</div><div class="ttdef"><b>Definition:</b> NumState.h:10</div></div>
+<div class="ttc" id="aa00250_html_a57548b0dada89db9ff8d950b59fca57d"><div class="ttname"><a href="a00250.html#a57548b0dada89db9ff8d950b59fca57d">NumState::Contains</a></div><div class="ttdeci">bool Contains(char sym) override</div><div class="ttdef"><b>Definition:</b> NumState.cpp:3</div></div>
+<div class="ttc" id="aa00250_html_a693271414f418deca3b0529f72077f9b"><div class="ttname"><a href="a00250.html#a693271414f418deca3b0529f72077f9b">NumState::GetToken</a></div><div class="ttdeci">Token * GetToken(const std::string &amp;value) override</div><div class="ttdoc">Возвращает токен из текущего состояния</div><div class="ttdef"><b>Definition:</b> NumState.cpp:11</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="a00092.html">SeparatorState.h</a></li>
+    <li class="navelem"><a class="el" href="dir_e6494100d90214b157d1821e39c1fdd2.html">CLionProgects</a></li><li class="navelem"><a class="el" href="dir_eea87d875b3a77781c67f396e5e63eb8.html">RustCompiler</a></li><li class="navelem"><a class="el" href="dir_b7464a01de1875981b3ea3d2a628fb72.html">Lexer</a></li><li class="navelem"><a class="el" href="dir_179b45200a7866988540d9d0baf7bef6.html">States</a></li><li class="navelem"><a class="el" href="a00092.html">NumState.h</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

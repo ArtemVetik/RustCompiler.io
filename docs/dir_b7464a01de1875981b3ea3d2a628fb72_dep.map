@@ -1,7 +1,9 @@
 <map id="D:/CLionProgects/RustCompiler/Lexer" name="D:/CLionProgects/RustCompiler/Lexer">
-<area shape="rect" id="node1" href="dir_b7464a01de1875981b3ea3d2a628fb72.html" title="Lexer" alt="" coords="29,52,101,100"/>
-<area shape="rect" id="node2" href="dir_b078da6c24fc28fec29d0f15108e9dad.html" title="Exceptions" alt="" coords="22,148,109,196"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000012_000011.html" title="3" alt="" coords="61,122,69,137"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000011_000012.html" title="1" alt="" coords="62,112,70,126"/>
-<area shape="rect" id="clust1" href="dir_eea87d875b3a77781c67f396e5e63eb8.html" title="RustCompiler" alt="" coords="16,16,116,111"/>
+<area shape="rect" id="node2" href="dir_179b45200a7866988540d9d0baf7bef6.html" title="States" alt="" coords="37,159,109,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000012_000013.html" title="7" alt="" coords="78,133,86,148"/>
+<area shape="rect" id="node3" href="dir_b078da6c24fc28fec29d0f15108e9dad.html" title="Exceptions" alt="" coords="142,159,229,207"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000012_000011.html" title="3" alt="" coords="137,133,145,148"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000011_000012.html" title="1" alt="" coords="114,122,122,136"/>
+<area shape="rect" id="clust2" href="dir_b7464a01de1875981b3ea3d2a628fb72.html" alt="" coords="27,52,120,217"/>
+<area shape="rect" id="clust1" href="dir_eea87d875b3a77781c67f396e5e63eb8.html" title="RustCompiler" alt="" coords="16,16,131,228"/>
 </map>
